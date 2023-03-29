@@ -1,0 +1,94 @@
+#+title: Todo
+* inbox
+** DONE Consistent background color
+** DONE consistent top nav
+there should be equl space above and below
+** DONE check in on community png's
+we'll get a list of logos, all 200x150
+-
+** DONE Move community grid to front page
+** DONE ensure 400 is standard weight
+300 is for the big messages and for the text content of the accordion sections
+** DONE fill in all accordion sections with latest text
+*** DONE add in all meeting room content
+*** DONE work on proper styling of accordion sections
+*** DONE price-list should be spaced
+*** DONE Meeting faq
+NEEDS INFO
+*** DONE events faq
+** DONE Get the colours correct for the light
+our background should toggle between three light versions of each color:
+- yellow
+- blush
+- teal
+
+  These are the default colors for each but with an opacity of 0.25 instead of 1
+
+** DONE Add black overlay gradient to top images
+should be the same gradient. can we do it with just css?
+** DONE Same spacing for big messages as the full-width images
+** DONE double check highlights across all text
+** DONE correct spacing and padding for big messages
+** DONE add headshots to community page
+** DONE Fill out story page
+** DONE Update meeting request forms to include the meeting room
+- a radio list like our layout
+- default check based on where they clicked from
+- they can change to something else
+- options include the occupancy limit
+** DONE make CSS response
+** DONE forms add to google sheet
+** DONE remove arrow from book or enquire here
+** DONE use svg with dynamic color for logo
+- top should be new orange
+- bottom should be white
+- apply to every page
+** DONE shrink down logo so there's more of a border
+** DONE remove all american spellings
+** DONE make all fonts smaller
+- make a base pt font of 14px instead of 20px
+** DONE remove the "book a meeting" title from form page, just the forms.
+** DONE add space below the links in meeting page and remove arrow
+** DONE move all left margins to fit with big-message margin
+** DONE bring header over to the form page
+** DONE tighter margin on story text
+:LOGBOOK:
+CLOCK: [2023-03-29 Wed 11:27]--[2023-03-29 Wed 11:32] =>  0:05
+:END:
+when the text is multiple paragraphs, make font the same size generally as the
+menu and reduce its width to be more readable
+** DONE bring over google forms fully to the form page
+
+took this out, may no longer need it!
+#+begin_src html
+        <fieldset>
+          <legend>What room would you like to book?</legend>
+          <div class="radio-group">
+            <input type="radio" id="bmr_silver-linings" name="space" value="silver-linings"/>
+            <label for="bmr_silver-linings">silver linings (up to 12 people)</label>
+          </div class="radio-group">
+          <div class="radio-group">
+            <input type="radio" id="bmr_whataitai-ngake" name="space" value="whataitai-ngake"/>
+            <label for="bmr_whataitai-ngake">studio whataitai+ngake (up to 12 people)</label>
+          </div class="radio-group">
+          <div class="radio-group">
+            <input type="radio" id="bmr_workshop" name="space" value="workshop"/>
+            <label for="bmr_workshop">workshop space (up to 36 people)</label>
+          </div class="radio-group">
+          <div class="radio-group">
+            <input type="radio" id="bmr_entire" name="space" value="entire"/>
+            <label for="bmr_entire">entire two/fiftyseven (up to 200)</label>
+          </div class="radio-group">
+          <div class="radio-group">
+            <input type="radio" id="bmr_unsure" name="space" value="unsure"/>
+            <label for="bmr_unsure">I'm not sure!</label>
+          </div class="radio-group">
+        </fieldset>
+#+end_src
+** DONE use new images from slack chat
+** DONE use original images throughout story page
+** TODO add transition animation to quotes
+** TODO style all question items properly
+** TODO make sure form is connected to google sheets
+** TODO make sure form in workspace connected to google shees
+** TODO alt images for every image
