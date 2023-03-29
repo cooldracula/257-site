@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'TF Grotesk';
+    font-style: normal;
+    src: local("TF Grotesk"), url("./TfGrotesk.otf") format("otf");
+}
+@font-face {
+    font-family: 'TF Grotesk';
+    font-style: italic;
+    src: local("TF Grotesk"), url("./TfGroteskItalic.otf") format("otf");
+}

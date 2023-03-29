@@ -1,0 +1,506 @@
+body {
+    background: var(--body_bg);
+    color: var(--text-color);
+    font-size: var(--base-pt);
+    font-family: var(--body-font);
+}
+
+* {
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+header.splash {
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+}
+
+@media(max-width: 667px) {
+    header.splash {
+        height: 40vh;
+    }
+    .splash-topbar {
+        padding: 0;
+        --text-color: var(--burnt-orange);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--font-xs);
+        flex-wrap: wrap;
+    }
+}
+
+
+header.splash.home {
+    background-image: url('/aesthetic/assets/9-257-Space-Web.jpg');
+    background-color: var(--cerise);
+    background-blend-mode: multiply;
+}
+
+header.splash.workspace{
+    background-image: url('/aesthetic/assets/35-1-257-Space-R2Alts-Web.jpg');
+}
+
+body#book-room {
+    --text-color: var(--dark-green);
+}
+
+body#meetings header.splash {
+    background-image: url('/aesthetic/assets/4-1-257-Space-R2Alts-Web.jpg');
+    background-position: bottom -520px left 0px;
+}
+
+body#events header.splash {
+    background-image: url('/aesthetic/assets/twofiftyseven_shared_office_venue.jpg');
+    background-color: var(--dark-blue);
+    background-blend-mode: multiply;
+}
+
+body#community header.splash {
+    background-image: url('/aesthetic/assets/TwoFiftySeven_230421-19.jpg');
+    background-color: var(--maroon);
+    background-blend-mode: multiply;
+}
+
+.splash-topbar {
+    padding: var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-contents: center;
+    flex-direction: row-reverse;
+    padding-left: var(--space-xl);
+}
+
+.splash-topbar-logo ,
+.footer-logo {
+    width: calc(var(--space-xxxl) * 1.5);
+
+}
+
+.splash-topbar-logo img ,
+.footer-logo img {
+    width: 100%;
+}
+
+.splash-topbar-nav {
+    --text-color: var(--burnt-orange);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--font-l);
+    flex-wrap: wrap;
+}
+
+.regular-nav {
+    background: var(--bg-top);
+    position: sticky;
+    top: 0;
+    --text-color: var(--burnt-orange);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--font-l);
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--font-xl);
+    margin-right: var(--font-l);
+    margin-bottom: var(--font-m);
+}
+
+.nav-item.active {
+    border-bottom: 2px solid;
+}
+
+
+.splash.home {
+    background-color: var(--purple);
+}
+
+.question-list{
+    --text-color: var(--dark-green);
+    padding: var(--space-xl);
+    padding-top: 0;
+    margin-bottom: var(--space-xxxl);
+    font-size: calc(var(--font-xl) * 1.3);
+    font-weight: 300;
+    line-height: 1.5;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    width: var(--half-width);
+}
+
+.question-list.booking .question-item {
+    padding-bottom: 2rem;
+}
+
+.question-item {
+    border-top: 2px solid var(--dark-green);
+    width: 100%;
+    list-style: none;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.question-item .toggle {
+    cursor: pointer;
+}
+
+.question-item:last-child {
+    border-bottom: 2px solid var(--dark-green);
+}
+
+.question-item.condensed {
+    max-width: var(--form-width);
+}
+
+.question-item.condensed summary {
+    font-size: var(--font-xl);
+}
+
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question > .toggle {
+    font-weight: 400;
+}
+
+.question-item ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: var(--space-lg);
+}
+
+.question-item li {
+    margin-bottom: var(--space-lg);
+    font-weight: 200;
+}
+
+.big.message {
+    padding: var(--space-xl);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xxl);
+    font-size: calc(var(--font-xxl) * 1.4);
+    font-weight: 300;
+    line-height: 1.5;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.big.message.right {
+    --text-color: var(--dark-green);
+    justify-content: flex-end;
+    text-align: right;
+}
+
+
+.big.message.secondary {
+    --text-color: var(--dark-green);
+}
+
+.big.message.primary {
+    --text-color: var(--text-color);
+}
+
+.big.message p {
+    font-weight: 100;
+    margin-top: 0;
+}
+
+.big.message.w-50 p{
+    max-width: calc(100vw / 1.6);
+}
+
+.big.message.w-66 p{
+    max-width: calc(100vw / 1.33);
+}
+
+.big.message b {
+    font-family: var(--display);
+    font-size: 120%;
+    font-weight: 800;
+}
+
+section.directory {
+    padding: 0;
+
+}
+
+.directory-list {
+    margin: 0;
+    padding: 0;
+}
+
+.directory-list li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.directory-item {
+    --text-color: var(--burnt-orange);
+    color: var(--burnt-orange);
+    display: flex;
+    height: calc(var(--space-xxxl) * 4);
+    margin-bottom: var(--space-xxxl);
+    background-size: cover;
+    background-position: center;
+}
+
+.directory-item-title {
+    padding: var(--space-xl);
+    padding-top: var(--space-xxl);
+    font-size: var(--font-xxl);
+}
+
+.directory-item[href="/meetings"] {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0)),
+                url("/aesthetic/assets/1-257-Space-Web.jpg");
+    background-blend-mode: multiply;
+}
+
+.directory-item[href="/workspace"] {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0)),
+                url("/aesthetic/assets/18-257-Space-Web.jpg");
+    background-blend-mode: multiply;
+}
+
+.directory-item[href="/events"] {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0)),
+                url("/aesthetic/assets/5-257-Space-Web.jpg");
+    background-blend-mode: multiply;
+}
+
+.directory-item[href="/community"] {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0)),
+                url("/aesthetic/assets/4-257-Space-Web.jpg");
+    background-blend-mode: multiply;
+    color: var(--teal);
+}
+
+.full-width {
+    width: 100vw;
+}
+
+.gallery-list figure {
+    margin: 0;
+    padding: 0;
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: var(--space-xxl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-list figure img {
+    width: 100%;
+}
+
+
+figure.full-width {
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+}
+
+figure.full-width img {
+    max-width: 100%;
+}
+
+footer {
+    font-size: var(--font-l);
+    --text-color: white;
+    padding: var(--space-xl);
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-xxl);
+}
+
+.booking-link ,
+.enquiry-link {
+    border-bottom: 4px solid;
+}
+
+
+#meeting-rooms {
+    margin-top: var(--space-xxxxl);
+}
+
+.question .content b {
+    font-weight: 800;
+}
+
+p.bigger {
+    font-size: calc(var(--font-xxl) * 1.2);
+    --text-color: var(--dark-green);
+    padding: var(--space-xl);
+}
+
+.community-grid {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: var(--space-xl);
+}
+
+
+.community-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.community-item img {
+    width: 100%;
+}
+
+.mb-0{
+    margin-bottom: 0 !important;
+}
+
+.mt-0{
+    margin-top: 0 !important;
+}
+
+.pb-0{
+    padding-bottom: 0 !important;
+}
+
+.pt-0{
+    padding-bottom: 0 !important;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+
+
+
+/*
+ *
+ * Book meeting room
+ *
+ */
+
+#book-room h1 {
+    font-size: var(--font-xxl);
+    font-family: var(--display);
+}
+
+.booking-sect {
+    margin-left: var(--space-md);
+    max-width: var(--form-width);
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-bottom: var(--space-md);
+}
+
+.booking h2 {
+    margin-top: 0;
+    font-weight: 200;
+}
+
+.booking-form {
+    font-size: var(--font-l);
+    display: flex;
+    flex-flow: column;
+    margin-top: var(--space-xl);
+}
+
+.form-group {
+    margin-bottom: calc(var(--space-md) * 1.2);
+    display: flex;
+    flex-flow: column;
+}
+
+.form-group label {
+    margin-bottom: var(--space-sm);
+}
+
+.booking-form input ,
+.booking-form textarea {
+    border: none;
+}
+
+input:focus {
+    outline: 1px solid var(--dark-green);
+}
+
+.booking-form fieldset {
+    margin-top: var(--space-lg);
+    border: none;
+    padding: 0;
+}
+
+.booking-form fieldset legend {
+    margin-bottom: var(--space-md);
+}
+
+.radio-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: calc(var(--space-sm) * 1.2);
+}
+
+.radio-group input[type="radio"] {
+    appearance: none;
+    border-radius: 50%;
+    width: calc(var(--font-m) * 1.2);
+    height: calc(var(--font-m) * 1.2);
+
+    border: 3px solid;
+    transition: 0.2s all linear;
+    margin-right: var(--space-md);
+    position: relative;
+    top: 4px;
+}
+
+input[type="radio"]:checked {
+  border: 11px solid;
+}
+
+utton:active {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+
+
+.other-input {
+    margin-left: var(--font-xxxs);
+    padding-left: var(--font-xxs);
+}
+
+.submit-group {
+    margin-top: var(--space-lg);
+}
+
+.submit-group button {
+    padding: calc(var(--font-xxs) * 0.9);
+    background: var(--dark-green);
+    color: #f2f2f2;
+}

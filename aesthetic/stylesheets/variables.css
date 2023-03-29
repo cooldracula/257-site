@@ -1,0 +1,135 @@
+/*------------------------------------*\
+  #VARIABLES.CSS
+    our defining features
+\*------------------------------------*/
+
+:root {
+
+    /*------------------*\
+      #Colours
+    \*..................*/
+
+    --cerise: rgba(235,9,138,1);
+    --dark-green: rgba(3,66,37,1);
+    --burnt-orange: rgba(240,144,40,1);
+    --purple: rgba(149,81,160,1);
+    --purple_light: rgba(149,81,160,0.5);
+    /* --maroon: rgba(108,12,34,1); */
+    /* --maroon_light: rgba(108,12,34,0.5); */
+    --dark-blue:  rgba(14,0,72,1);
+    --yellow: rgba(255,245,113,1);
+    --blush: rgba(239,148,145,1);
+    --teal: rgba(74,191,175,1);
+    --bright-green: rgba(177,211,74,1);
+    --bright-green_lightest: rgb(224,237,183);
+    --teal_lightest: rgb(183,229,223);
+    --blush_lightest: rgb(249,212,211);
+    --yellow_lightest: rgb(255,251,198);
+    --black: #222222;
+    --white: #ffffff;
+
+    --body_bg: var(--bright-green_lightest);
+    --text-color: var(--maroon);
+    --body_color: var(--maroon);
+
+
+
+
+
+    /*------------------*\
+      #Photos
+    \*..................*/
+    --splash-image: url('/aesthetic/assets/9-257-space-web.jpg');
+    --directory-image: url("/aesthetic/assets/1-257-Space-Web.jpg");
+
+
+
+
+
+    /*------------------*\
+      #Typography
+    \*..................*/
+
+    --base-pt: 14px;
+    --font-weight: 400;
+    --sans:  'mundial';
+    /* --serif:  'IBM Plex Serif'; */
+    --display:  'Crake Bold';
+    --body-font: var(--sans);
+    --heading-font:  var(--display);
+    /* Using the musical tetrotonic scale, from https://spencermortensen.com/articles/typographic-scale/ */
+    --font-xxs: .5201rem;
+    --font-xs: .8409rem;
+    --font-s: 1rem;
+    --font-m: 1.1892rem;
+    --font-ml: 1.4142rem;
+    --font-l: 1.6818rem;
+    --font-xl: 2rem;
+    --font-xxl: 2.3784rem;
+
+
+
+
+
+    /*------------------*\
+      #Spacing
+    \*..................*/
+
+    --space-unit: 1rem;
+    --space-xxxs: calc(0.25 * var(--space-unit));
+    --space-xxs:  calc(0.375 * var(--space-unit));
+    --space-xs:   calc(0.5 * var(--space-unit));
+    --space-sm:   calc(0.75 * var(--space-unit));
+    --space-md:   calc(1.25 * var(--space-unit));
+    --space-lg:   calc(2 * var(--space-unit));
+    --space-xl:   calc(3.25 * var(--space-unit));
+    --space-xxl:  calc(5.25 * var(--space-unit));
+    --space-xxxl: calc(8.5 * var(--space-unit));
+    --space-xxxxl: calc(13.75 * var(--space-unit));
+
+    --basic-padding: var(--space-sm);
+
+
+
+
+
+    /*------------------*\
+      #Sizes and Layout
+    \*..................*/
+
+    --max-width: calc(var(--space-unit) * 80);
+    --half-width: calc(var(--space-unit) * 55);
+    --readable-width: 48rem;
+    --form-width: calc(var(--space-unit) * 35);
+
+    --header-height: 90vh;
+    --top-bar-padding: var(--space-sm) var(--space-xxl) var(--space-sm) var(--space-xxl);
+    --top-bar-font-size: var(--font-xl);
+    --nav-gap: var(--font-xxl);
+
+    --big-message-padding: 0 var(--space-xl);
+    --big-message-font-size: calc(var(--font-xxl) * 1.4);
+    --big-message-story-font-size: calc(var(--font-xxl) * 1.1);
+    --big-message-line-height: 1.5;
+    --big-message-margin: var(--space-xxl);
+
+    --directory-item-height: 55vh;
+    --directory-item-margin: 0 0 var(--space-xxl) 0;
+    --directory-item-padding: var(--space-xxl);
+    --directory-item-font-size: var(--font-xxl);
+
+    --gallery-list-height: 800px;
+    --gallery-list-width: 100vw;
+    --gallery-list-margin: 0 0 var(--space-xxl) 0;
+
+    --question-list-padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
+    --question-list-margin: 0 0 var(--space-xxxl) 0;
+    --question-list-content-margin: var(--space-lg) 0 0 0;
+    --question-list-font-size: var(--font-xl);
+    --question-list-line-height: 1.5;
+    --question-list-width: var(--half-width);
+
+    /* --side-bar: calc(var(--readable-width) / 3); */
+    /* --offset: calc(var(--space-xxxl) + var(--space-xl)); */
+    /* --section-height: calc(var(--space-xxxl) * 4); */
+

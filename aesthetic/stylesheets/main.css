@@ -1,0 +1,771 @@
+/*------------------*\
+    #Globals
+\*..................*/
+
+html {
+    font-size: 13px;
+}
+body {
+    background: var(--body_bg);
+    color: var(--text-color);
+    font-size: var(--base-pt);
+    font-family: var(--body-font);
+    font-weight: 400;
+}
+
+* {
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+a.underlined {
+    text-decoration: underline;
+}
+
+ul,li,figure {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.full-width {
+    width: 100vw;
+}
+
+
+
+
+
+/*------------------*\
+    # Splash Banner
+\*..................*/
+
+.splash {
+    height: var(--header-height);
+    width: 100vw;
+    background-size: cover;
+    background-position: top;
+    background-image:
+        linear-gradient(to bottom,
+                        var(--black),
+                        transparent,
+                        transparent),
+        var(--splash-image);
+}
+
+#workspace{
+    --splash-image: url('/aesthetic/assets/35-1-257-Space-R2Alts-Web.jpg');
+}
+#meetings {
+    --splash-image: url('/aesthetic/assets/meetings-banner.jpg');
+}
+#book-room {
+    --text-color: var(--dark-green);
+}
+#events {
+    --splash-image: url('/aesthetic/assets/twofiftyseven_shared_office_venue.jpg');
+}
+#community {
+    --splash-image: url('/aesthetic/assets/TwoFiftySeven_230421-19.jpg');
+}
+#our-story {
+    --splash-image: url('/aesthetic/assets/our-story-banner.jpeg');
+}
+
+.splash-topbar {
+    --text-color: var(--cerise);
+    padding: var(--top-bar-padding);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row-reverse;
+    font-size: var(--top-bar-font-size);
+}
+
+.splash-topbar.sticky {
+    background: var(--body_bg);
+    position: sticky;
+    top: 0;
+}
+
+.nav-item.active {
+    border-bottom: 2px solid;
+}
+
+
+.splash-topbar-nav {
+    --text-color: var(--cerise);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--nav-gap);
+    flex-wrap: wrap;
+    padding-bottom: var(--font-m);
+}
+
+.splash-topbar-logo ,
+.footer-logo {
+    width: calc(var(--space-xxxl) * 1.3);
+    text-align: right;
+
+}
+
+.main-logo{
+    fill: var(--text-color);
+}
+
+footer .main-logo {
+    fill: var(--white);
+}
+
+
+.splash-topbar-logo img ,
+.footer-logo img {
+    width: 100%;
+}
+
+
+
+
+
+/*------------------*\
+    #Big Messages
+\*..................*/
+
+.big.message {
+    --text-color: var(--cerise);
+    font-size: var(--big-message-font-size);
+    line-height: var(--big-message-line-height);
+    margin: var(--big-message-margin);
+    grid-gap: var(--big-message-font-size);
+    font-weight: 300;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media(min-width: 667px) {
+    .splash-topbar.sticky + .big.message {
+        margin-top: 0;
+    }
+}
+
+.big.message.right {
+    --text-color: var(--dark-green);
+    align-items: flex-end;
+    text-align: right;
+}
+
+.big.message.secondary {
+    --text-color: var(--dark-green);
+}
+.big.message.tertiary {
+    --text-color: var(--purple);
+}
+
+.big.message p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.big.message.w-40 p{
+    max-width: calc(100vw / 1.98);
+}
+
+.big.message.w-50 p{
+    max-width: calc(100vw / 2);
+}
+
+.big.message.w-66 p{
+    max-width: calc(100vw / 1.82);
+}
+
+.big.message b {
+    font-family: var(--display);
+    font-size: 120%;
+    font-weight: 800;
+}
+
+.big.message.story {
+    font-size: var(--big-message-story-font-size);
+}
+
+.big.message.story p {
+    max-width: var(--readable-width);
+}
+
+
+
+
+
+/*------------------*\
+ #Question list
+\*..................*/
+
+.question-list{
+    --text-color: var(--dark-green);
+    padding: var(--question-list-padding);
+    margin: var(--question-list-margin);
+    font-size: var(--question-list-font-size);
+    line-height: var(--question-list-line-height);
+    max-width: var(--question-list-width);
+    font-weight: 300;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.question-list.booking .question-item {
+}
+
+.question-item {
+    border-top: 2px solid var(--dark-green);
+    width: 100%;
+    list-style: none;
+    padding-top: 0.7rem;
+    padding-bottom: 1.5rem;
+}
+
+.question-item a:last-child {
+    display: block;
+    margin-bottom: var(--font-l);
+}
+
+.question-item .toggle {
+    cursor: pointer;
+}
+
+.toggle-asset {
+    width: calc(var(--question-list-font-size) * 0.66);
+}
+
+.question-item summary + * {
+    margin: var(--question-list-content-margin);
+}
+
+.question-item:last-child {
+    border-bottom: 2px solid var(--dark-green);
+}
+
+.question-item form {
+    max-width: var(--form-width);
+}
+
+.question-item.condensed {
+    max-width: var(--form-width);
+}
+
+.question-item.condensed summary {
+    font-size: var(--font-xl);
+}
+
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question .content {
+    font-weight: 300;
+}
+
+.question > .toggle {
+    font-weight: 300;
+}
+
+.faq .question .content {
+    font-weight: 400;
+}
+
+
+.question-item ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: var(--space-lg);
+}
+
+.question-item li {
+    margin-bottom: var(--space-md);
+    /* font-weight: 300; */
+}
+
+.question-item li ul {
+    padding-left: var(--space-lg);
+    /* font-weight: 300; */
+}
+
+.question-item li ul li {
+    list-style: circle;
+    margin-bottom: var(--space-xs);
+}
+
+.question-item .price-list {
+    margin-top: var(--space-xxl);
+    margin-bottom: var(--space-xxl);
+    padding: 0;
+}
+
+
+
+
+
+/*------------------*\
+    #Directory
+\*..................*/
+
+.directory-item {
+    --text-color: var(--burnt-orange);
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    height: var(--directory-item-height);
+    margin: var(--directory-item-margin);
+    padding: var(--directory-item-padding);
+    font-size: var(--directory-item-font-size);
+    background-image:
+        linear-gradient(to bottom,
+                        var(--black),
+                        transparent,
+                        transparent),
+        var(--directory-image);
+}
+
+.directory-list li:last-child .directory-item{
+    margin-bottom: var(--space-xl);
+}
+
+.directory-item[href="/meetings"] {
+    --directory-image: url("/aesthetic/assets/1-257-Space-Web.jpg");
+}
+.directory-item[href="/workspace"] {
+    --directory-image: url("/aesthetic/assets/18-257-Space-Web.jpg");
+}
+.directory-item[href="/events"] {
+    --directory-image: url("/aesthetic/assets/5-257-Space-Web.jpg");
+}
+.directory-item[href="/community"] {
+    --directory-image: url('/aesthetic/assets/TwoFiftySeven_230421-19.jpg');
+}
+
+
+
+
+
+/*------------------*\
+#Gallery
+\*..................*/
+
+.gallery-list figure {
+    height: var(--gallery-list-height);
+    width: var(--gallery-list-width);
+    margin: var(--gallery-list-margin);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-list figure img {
+    /* min-height: 100%; */
+    width: 100%;
+    vertical-align: middle;
+}
+
+.gallery-list figure:last-child {
+    margin-bottom: var(--space-xl);
+}
+
+
+
+figure.full-width {
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+}
+
+figure.full-width img {
+    max-width: 100%;
+}
+
+footer {
+    font-size: var(--font-l);
+    --text-color: white;
+    padding: var(--space-xl);
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: var(--space-xxl); */
+}
+
+.booking-link ,
+.enquiry-link,
+.email-link {
+    border-bottom: 2px solid;
+}
+
+
+#meeting-rooms {
+    margin-top: calc(var(--space-xl) * -1.5);
+}
+
+.question .content b {
+    font-weight: 800;
+}
+
+p.bigger {
+    font-size: calc(var(--font-xxl) * 1.2);
+    --text-color: var(--dark-green);
+    padding: var(--space-xl);
+}
+
+section#community {
+    background: #fff;
+}
+
+section#community p.bigger {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.community-grid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.community-grid {
+    background: #fff;
+    padding: var(--space-lg);
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+@media(max-width: 667px) {
+    .community-grid {
+        width: 80vw;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.community-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.community-item img {
+    max-width: 100%;
+}
+
+.mb-0{
+    margin-bottom: 0 !important;
+}
+
+.mt-0{
+    margin-top: 0 !important;
+}
+
+.pb-0{
+    padding-bottom: 0 !important;
+}
+
+.pt-0{
+    padding-bottom: 0 !important;
+}
+
+.sticky.hidden {
+    opacity: 0;
+}
+
+.toggle-asset.hidden {
+    display: none;
+}
+
+
+
+
+
+/*
+ *
+ * Book meeting room
+ *
+ */
+
+#book-room h1 {
+    font-size: var(--font-xxl);
+    font-family: var(--display);
+}
+
+.booking-sect {
+    margin-left: var(--space-md);
+    max-width: var(--form-width);
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-bottom: var(--space-md);
+}
+
+.booking h2 {
+    margin-top: 0;
+    font-weight: 200;
+}
+
+.booking-form {
+    font-size: var(--font-l);
+    display: flex;
+    flex-flow: column;
+    margin-top: var(--space-xl);
+}
+
+.form-group {
+    margin-bottom: calc(var(--space-md) * 1.2);
+    display: flex;
+    flex-flow: column;
+}
+
+.form-group label {
+    margin-bottom: var(--space-sm);
+}
+
+.booking-form input ,
+.booking-form textarea {
+    border: none;
+}
+
+input[type=checkbox]:focus
+{
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type=checkbox]
+{
+    background-color: transparent;
+    border: 2px solid var(--dark-green);
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: var(--font-ml);
+    height: var(--font-ml);
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+    margin-right: 0.25rem;
+}
+
+input[type=checkbox]:checked
+{
+    background-color: var(--dark-green);
+    background: var(--dark-green) url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
+}
+
+input:focus {
+    outline: 1px solid var(--dark-green);
+}
+
+.booking-form fieldset {
+    margin-bottom: var(--space-lg);
+    border: none;
+    padding: 0;
+}
+
+.booking-form fieldset + .booking-form fieldset {
+    margin-top: var(--space-lg);
+}
+
+/* .booking-form input[type="checkbox"] { */
+/*     accent-color: var(--dark-green); */
+/*     width: 1rem; */
+/*     height: 1rem; */
+/* } */
+
+/* .booking-form fieldset:first-of-type { */
+/*     margin-top: 0; */
+/*     margin-bottom: var(--space-lg); */
+/* } */
+
+/* .booking-form fieldset:first-of-type { */
+/* } */
+
+.booking-form fieldset legend {
+    margin-bottom: var(--space-sm);
+}
+
+.radio-group  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: calc(var(--space-sm) * 1.2);
+}
+
+.radio-group input[type="radio"] {
+    appearance: none;
+    border-radius: 50%;
+    width: calc(var(--font-m) * 1.2);
+    height: calc(var(--font-m) * 1.2);
+
+    border: 3px solid;
+    transition: 0.2s all linear;
+    margin-right: var(--space-md);
+    position: relative;
+    top: 4px;
+}
+
+input[type="radio"]:checked {
+    accent-color: var(--dark-green);
+    background: var(--dark-green)
+}
+
+utton:active {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+
+
+.other-input {
+    margin-left: var(--font-xxxs);
+    padding-left: var(--font-xxs);
+}
+
+.submit-group {
+    margin-top: var(--space-lg);
+}
+
+.submit-group button {
+    padding: calc(var(--font-xxs) * 0.9);
+    background: var(--dark-green);
+    color: #f2f2f2;
+}
+
+.collective-grid {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.collective-member {
+    background: pink;
+    background-size: contain;
+    height: calc(100vw/2);
+    width: calc(100vw/2);
+}
+
+.member-details {
+    font-size: 1.75vw;
+    margin: 3.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+}
+
+.member-name {
+    margin-bottom: calc(var(--font-xxs) * 0.5);
+}
+
+.member-link {
+    font-weight: 300;
+}
+
+.price-list {
+    padding: 0;
+    padding-right: 0;
+}
+
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.price-item * {
+    margin: 0;
+    padding: 0;
+}
+@media(max-width: 1100px) {
+    :root{
+    --nav-gap: 1rem;
+    }
+}
+
+
+@media(max-width: 667px) {
+    :root {
+        --header-height: 25vh;
+        --top-bar-padding: var(--space-sm);
+        --top-bar-font-size: var(--font-ml);
+        --nav-gap: var(--font-xs);
+
+        --big-message-padding: 0 var(--space-lg);
+        --big-message-font-size: var(--font-xl);
+        --big-message-line-height: 1.33;
+        --big-message-margin: var(--space-xl) var(--space-md);
+
+        --directory-item-height: 33vh;
+        --directory-item-margin: 0 0 var(--space-lg) 0;
+        --directory-item-padding: var(--space-lg) var(--space-md);
+        --directory-item-font-size: var(--big-message-font-size);
+
+        --gallery-list-height: 25vh;
+        --gallery-list-margin: 0 0 var(--space-md) 0;
+
+        --question-list-padding: 0;
+        --question-list-margin: var(--space-sm);
+        --question-list-font-size: calc(var(--font-m) * 1.2);
+        --question-list-line-height: 1.5;
+        --question-list-content-margin: var(--space-md) 0 0 0;
+        --question-list-width: 100%;
+
+    }
+    .splash {
+        background-image:
+            linear-gradient(to bottom,
+                            var(--black),
+                            transparent),
+            var(--splash-image);
+    }
+    .splash-topbar {
+        flex-wrap: wrap;
+        height: 100%;
+        align-content: space-around;
+    }
+
+    .splash-topbar.sticky {
+        display: none;
+    }
+    .splash-topbar-nav {
+        justify-content: center;
+    }
+    .nav-item {
+        margin-right: 0;
+    }
+    .big.message p ,
+    .big.message.w-40 p ,
+    .big.message.w-50 p ,
+    .big.message.w-66 p {
+        max-width: 100%;
+    }
+    .directory-list li:last-child .directory-item ,
+    .gallery-list figure:last-child {
+        margin-bottom: var(--space-sm);
+    }
+    .question-item {
+        padding: 0.2rem 0;
+    }
+    .question-item li {
+        line-height: 1.4;
+    }
+    .toggle-asset {
+        width: var(--font-m);
+    }
+}
