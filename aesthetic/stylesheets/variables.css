@@ -113,6 +113,8 @@
     --big-message-line-height: 1.5;
     --big-message-margin: var(--space-xxl);
 
+    --quotes-height: 300px;
+
     --directory-item-height: 55vh;
     --directory-item-margin: 0 0 var(--space-xxl) 0;
     --directory-item-padding: var(--space-xxl);
