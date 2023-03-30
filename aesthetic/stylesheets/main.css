@@ -259,7 +259,7 @@ footer .main-logo {
     width: 100%;
     list-style: none;
     padding-top: 0.7rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.7rem;
 }
 
 .question-item a:last-child {
@@ -437,7 +437,6 @@ footer {
 .booking-link ,
 .enquiry-link,
 .email-link {
-    border-bottom: 2px solid;
 }
 
 
