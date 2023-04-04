@@ -236,14 +236,15 @@
       </section>
       <section class="big message" id="quotes-header">
         <p>
-        two fifty seven is...
+        two fifty seven is
+          <span id="quotes">
+        where I want my team to work cos its a cool space with cool people
         </p>
       </section>
-      <section class="big message w-50 primary" id="quotes">
-        <p>
-        ‘where I want my team to work cos its a cool space with cool people’
-        </p>
-      </section>
+      <!-- <section class="big message w-50 primary" id="quotes">
+           <p>
+           </p>
+           </section> -->
       <section>
         <div class='details-list'>
           <details>
@@ -287,13 +288,13 @@
          "a pocket of magical space in wellington",
          "a place to connect with inspiring everyday superheroes",
        ];
-       const quoteElement = document.querySelector('#quotes p');
+       const quoteElement = document.querySelector('span#quotes');
        let idx = 0;
 
        setInterval(()=> {
          idx++
          const quote = quotes[idx % quotes.length]
-         quoteElement.textContent = `‘${quote}’`;
+         quoteElement.textContent = `${quote}`;
        },delay)
      }
     </script>

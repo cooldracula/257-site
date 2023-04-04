@@ -36,15 +36,12 @@ ul,li,figure {
 }
 
 #quotes-header {
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-xl);
 }
 
 #quotes {
     animation: 7s linear 0s infinite normal fade;
     height: var(--quotes-height);
-    justify-content: flex-start;
-    margin-top: 0;
-    margin-left: 25vw;
 }
 
 @keyframes fade {
