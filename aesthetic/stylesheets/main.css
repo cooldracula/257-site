@@ -71,12 +71,7 @@ ul,li,figure {
     width: 100vw;
     background-size: cover;
     background-position: top;
-    background-image:
-        linear-gradient(to bottom,
-                        var(--black),
-                        transparent,
-                        transparent),
-        var(--splash-image);
+    background-image: var(--splash-image);
 }
 
 #workspace{
