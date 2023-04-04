@@ -262,7 +262,11 @@ footer .main-logo {
     padding-bottom: 0.7rem;
 }
 
-.question-item a:last-child {
+.question-item *:last-child {
+    margin-bottom: var(--font-l);
+}
+
+.booking-link {
     display: block;
     margin-bottom: var(--font-l);
 }
