@@ -76,18 +76,15 @@ ul,li,figure {
 
 #workspace{
     --splash-image: url('/aesthetic/assets/workspace-splash.jpg');
-    /* --splash-image: url('/aesthetic/assets/35-1-257-Space-R2Alts-Web.jpg'); */
 }
 #meetings {
     --splash-image: url('/aesthetic/assets/meetings-splash.jpg');
-    /* --splash-image: url('/aesthetic/assets/meetings-banner.jpg'); */
 }
 #book-room {
     --text-color: var(--dark-green);
 }
 #events {
     --splash-image: url('/aesthetic/assets/events-splash.jpg');
-    /* --splash-image: url('/aesthetic/assets/twofiftyseven_shared_office_venue.jpg'); */
 }
 #community {
     --splash-image: url('/aesthetic/assets/community-splash.jpg');
