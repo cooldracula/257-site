@@ -87,11 +87,11 @@
         </div>
         <div class="form-group">
         <label for="attendance">End time of meeting- including packdown time</label>
-        <input type="time" name="start-time" required />
+        <input type="time" name="end-time" required />
         </div>
         <div class="form-group">
         <label for="noe on time">If you're flexible on date and time, let us know your thoughts here</label>
-        <input type="text" name="note on time" />
+        <input type="text" name="note-on-time" />
         </div>
         <div class="form-group">
         <label for="attending">Number of people attending</label>
@@ -121,7 +121,7 @@
           </div class="radio-group">
           <div class="radio-group">
             <input type="radio" id="bmr_other" name="layout" value="other"/>
-            <label for="bmr_other">Other: <input type="text" id="bmr_other_text" class='other-input'/></label>
+            <label for="bmr_other">Other: <input type="text" id="bmr-layout_other-text" class='other-input'/></label>
           </div class="radio-group">
         </fieldset>
         <fieldset>
@@ -147,8 +147,8 @@
             <label for="bmr_whiteboard-access">whiteboard access</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-           <input type="checkbox" id="bmr_equipment-other" name="equipment" value="other"/>
-            <label for="bmr_equipment-other">Other: <input type="text" id="bmr_other_text" class='other-input'/></label>
+           <input type="checkbox" id="bmr_equipment_other" name="equipment" value="other"/>
+            <label for="bmr_equipment-other">Other: <input type="text" id="bmr-equipment_other-text" class='other-input'/></label>
           </div class="checkbox-group">
         </fieldset>
         <fieldset>
@@ -169,46 +169,46 @@
         <fieldset>
           <legend>If yes, which of the below do you want catered?</legend>
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_morning-tea" name="what catered?" value="morning tea"/>
+            <input type="checkbox" id="bmr_morning-tea" name="catering-options" value="morning tea"/>
             <label for="bmr_morning-tea">morning tea</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_lunch" name="what catered?" value="lunch"/>
+            <input type="checkbox" id="bmr_lunch" name="catering-options" value="lunch"/>
             <label for="bmr_lunch">lunch</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_afternoon-tea" name="what catered?" value="afternoon tea"/>
+            <input type="checkbox" id="bmr_afternoon-tea" name="catering-options" value="afternoon tea"/>
             <label for="bmr_afternoon-tea">afternoon tea</label>
           </div class="checkbox-group">
         </fieldset>
         <div class="form-group">
         <label for="catering-budget">What is your per person budget for all of your above selections?(e.g. $10 morning tea, $20 lunch)</label>
-        <input type="text" id="catering-budget" name="catering budget" />
+        <input type="text" id="catering-budget" name="catering-budget" />
         </div>
         <div class="form-group">
           <label for="dietary-requirements">Please let us know of any dietary requirements for your attendees</label>
-          <input type="text" id="dietary-requirements" name="dietary requirements" />
+          <input type="text" id="dietary-requirements" name="dietary-requirements" />
         </div>
         <fieldset>
           <legend>Are you any of the following?</legend>
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_org-type-charity" name="org type" value="Charity/B-Corp/Not for profit <$200k"/>
+            <input type="checkbox" id="bmr_org-type-charity" name="org-type" value="Charity/B-Corp/Not for profit <$200k"/>
             <label for="bmr_org-type-charity">Charity / B-Corp / Not for profit with less than $200k gross annual turnover</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_org-type-no-gst" name="org type" value="Not GST registered"/>
+            <input type="checkbox" id="bmr_org-type-no-gst" name="org-type" value="Not GST registered"/>
             <label for="bmr_org-type-no-gst">Not GST registered</label>
           </div class="checkbox-group">
           <div>
-            <input type="checkbox" id="bmr_org-type-carbon-zero" name="org type" value="cert carbon zero"/>
+            <input type="checkbox" id="bmr_org-type-carbon-zero" name="org-type" value="cert carbon zero"/>
             <label for="bmr_org-type-carbon-zero">Certified carbon zero or carbon positive</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_org-type-community-based" name="org type" value="community-based volunteer"/>
+            <input type="checkbox" id="bmr_org-type-community-based" name="org-type" value="community-based volunteer"/>
             <label for="bmr_org-type-community-based">Community-based volunteer organisation</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_org-type-tangata-whenua" name="org type" value="tangata whenua or indigenous owned"/>
+            <input type="checkbox" id="bmr_org-type-tangata-whenua" name="org-type" value="tangata whenua or indigenous owned"/>
             <label for="bmr_org-type-tangata-whenua">Tangata whenua or indigenous-owned organisation</label>
           </div class="checkbox-group">
         </fieldset>
@@ -217,7 +217,7 @@
         </div>
       </form>
       </details>
-      <details id='bmr' class="question-item condensed">
+      <details id='ep' class="question-item condensed">
         <summary class="question">
           <span class="content">
             event prebrief
@@ -243,8 +243,8 @@
               </g>
             </svg>
         </summary>
-      <form id="bmr_form" class='booking-form w-50'>
-        <input type="hidden" name="sheet" value="event-prebrief">
+      <form id="ep_form" class='booking-form w-50'>
+        <input type="hidden" name="sheet" value="event prebrief">
         <div class="form-group">
         <label for="ep_name">Your name</label>
         <input type="text" id="ep_name" name="name" required/>
@@ -259,15 +259,15 @@
         </div>
         <div class="form-group">
         <label for="ep_phone-number">Your phone number</label>
-        <input type="tel" name="ep_phone-number" required />
+        <input type="tel" name="phone-number" required />
         </div>
         <div class="form-group">
           <label for="ep_org-purpose">Short description of what you/your organisation does and why you do it?</label>
-          <input type="text" id="ep_org-purpose" name="org purpose" />
+          <input type="text" id="ep_org-purpose" name="org-purpose" />
         </div>
         <div class="form-group">
           <label for="ep_event-summary">Short description of your event</label>
-          <input type="text" id="ep_event-summary" name="event summary" />
+          <input type="text" id="ep_event-summary" name="event-summary" />
         </div>
         <div class="form-group">
         <label for="ep_date">what is the date of your event?</label>
@@ -276,11 +276,11 @@
         <fieldset>
           <legend>is your event open to the public?</legend>
           <div class="radio-group">
-            <input type="radio" id="ep_open-public-yes" name="open to public" value="yes"/>
+            <input type="radio" id="ep_open-public-yes" name="public" value="yes"/>
             <label for="ep_open-public-yes">yes</label>
           </div class="radio-group">
           <div class="radio-group">
-            <input type="radio" id="ep_open-public-no" name="open to public" value="no"/>
+            <input type="radio" id="ep_open-public-no" name="public" value="no"/>
             <label for="bmr_theatre">no</label>
           </div class="radio-group">
         </fieldset>
@@ -308,7 +308,7 @@
           </div class="radio-group">
         </fieldset>
         <div class='submit-group'>
-          <button type="submit" id="bmr_submit">Submit</button>
+          <button type="submit" id="ep_submit">Submit</button>
         </div>
       </form>
       </details>
@@ -386,27 +386,65 @@
    document.addEventListener('DOMContentLoaded', () => {
      const bmrForm = document.querySelector("#bmr_form")
      const bmrSubmitButton = document.querySelector("#bmr_submit")
-     const scriptURL="https://script.google.com/macros/s/AKfycbzHuSXg4UvYsZzVNljJdkmI7h25ZlZYWuDJLzIfLGSgAz9zoUaNUqlmav91xus3jaWn/exec";
+     // const scriptURL="https://script.google.com/macros/s/AKfycbzHuSXg4UvYsZzVNljJdkmI7h25ZlZYWuDJLzIfLGSgAz9zoUaNUqlmav91xus3jaWn/exec";
+     const scriptURL="https://script.google.com/macros/s/AKfycbzRi9q4q3qmf38TrEP08w00LVSwg7GYH99VgOSlhX8odGTUK9MM2sAVq7co8j-oRyC3/exec";
      const geForm = document.querySelector("#ge_form")
      const geSubmitButton = document.querySelector("#ge_submit")
+     const epForm = document.querySelector("#ep_form")
+     const epSubmitButton = document.querySelector("#ep_submit")
+
+     function parseCheckboxes(formData,key, other) {
+       let options = formData.getAll(key);
+       const inclOther = options.includes('other');
+       if (inclOther) {
+         const otherInput = document.querySelector(other).value;
+         options = [...options.filter(o => o != 'other'), otherInput];
+
+       }
+       let optionsString = options.join(', ');
+       return optionsString;
+     }
+
+     function switchToSuccessMessage(id) {
+           let div = document.createElement('div');
+           let p = document.createElement('p');
+           p.textContent = 'Thank you! We will reach out to you soon.';
+           let a = document.createElement('a');
+           a.classList.add('underlined');
+           a.href = '/';
+           a.textContent = 'return home';
+           div.append(p,a);
+           let elem = document.querySelector(id);
+           elem.replaceWith(div);
+     }
 
      bmrForm.addEventListener('submit', e => {
        bmrSubmitButton.disabled = true
        bmrSubmitButton.textContent = 'sending request';
        e.preventDefault()
        const requestForm = new FormData(bmrForm)
-       const otherInput = document.querySelector('#bmr_other_text').value;
+
+       const equipString = parseCheckboxes(requestForm,'equipment','#bmr-equipment_other-text');
+       requestForm.set('equipment',equipString);
+
+       const caterOptString = parseCheckboxes(requestForm,'catering-options');
+       requestForm.set('catering-options',caterOptString);
+
+       const orgTypeString = parseCheckboxes(requestForm,'org-type');
+       requestForm.set('org-type',orgTypeString);
+
        const layoutType = requestForm.get('layout');
        if (layoutType === 'other') {
-         requestForm.append('layout-other',otherInput);
+         const layoutOtherInput = document.querySelector('#bmr-layout_other-text').value;
+         requestForm.append('layout-other',layoutOtherInput);
        };
        fetch(scriptURL, { method: 'POST', body: requestForm})
          .then(response => {
-           alert('Success!', response)
-           bmrSubmitButton.disabled = false
+           switchToSuccessMessage('#bmr_form');
          })
          .catch(error => {
            alert('Error!', error.message)
+           console.log({error});
            bmrSubmitButton.disabled = false
          })
      });
@@ -418,8 +456,27 @@
        const requestForm = new FormData(geForm)
        fetch(scriptURL, { method: 'POST', body: requestForm})
          .then(response => {
-           alert('Success!', response)
+           switchToSuccessMessage('#ge_form');
+         })
+         .catch(error => {
+           alert('Error!', error.message)
            geSubmitButton.disabled = false;
+         })
+     });
+
+     epForm.addEventListener('submit', e => {
+       epSubmitButton.disabled = true
+       epSubmitButton.textContent = 'sending request';
+       e.preventDefault()
+       const requestForm = new FormData(epForm)
+       const frequency = requestForm.get('frequency');
+       if (frequency == 'other') {
+         let otherFrequency = document.querySelector('#ep_freq-other_text').value;
+         requestForm.set('frequency',`[OTHER] ${otherFrequency}`);
+       }
+       fetch(scriptURL, { method: 'POST', body: requestForm})
+         .then(response => {
+           switchToSuccessMessage('#ep_form');
          })
          .catch(error => {
            alert('Error!', error.message)
@@ -429,17 +486,21 @@
 
      const bmrOpen = localStorage.getItem('bmr_open');
      if (bmrOpen === "true") {
-       console.log("bmr yep")
        const requestDetails = document.querySelector('#bmr');
        requestDetails.setAttribute('open', "true");
        localStorage.removeItem('bmr_open');
      }
      const geOpen = localStorage.getItem('ge_open');
      if (geOpen === "true") {
-       console.log("ge yep")
        const requestDetails = document.querySelector('#ge');
        requestDetails.setAttribute('open', "true");
        localStorage.removeItem('ge_open');
+     }
+     const epOpen = localStorage.getItem('ep_open');
+     if (epOpen === "true") {
+       const requestDetails = document.querySelector('#ep');
+       requestDetails.setAttribute('open', "true");
+       localStorage.removeItem('ep_open');
      }
    });
   </script>

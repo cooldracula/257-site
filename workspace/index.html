@@ -424,33 +424,33 @@
               </g>
             </svg>
           </summary>
-          <p>
-          You can, through the form below!
-          </p>
-      <form id="ge_form" class='booking-form'>
-        <input type="hidden" name="sheet" value="general enquiry">
-        <div class="form-group">
-        <label for="name">Your name</label>
-        <input type="text" name="name"/>
-        </div>
-        <div class="form-group">
-        <label for="organisation">Your organisation</label>
-        <input type="text" name="organisation"/>
-        </div>
-        <div class="form-group">
-        <label for="email">Your email</label>
-        <input type="email" name="email"/>
-        </div>
-        <div class="form-group">
-        <label for="details">Tell us more!</label>
-        <textarea name="details" rows="10"></textarea>
-        </div>
+          <div id='ge-content'>
+            <p> You can, through the form below! </p>
+            <form id="ge_form" class='booking-form'>
+              <input type="hidden" name="sheet" value="general enquiry">
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" name="name"/>
+              </div>
+              <div class="form-group">
+                <label for="organisation">Your organisation</label>
+                <input type="text" name="organisation"/>
+              </div>
+              <div class="form-group">
+                <label for="email">Your email</label>
+                <input type="email" name="email"/>
+              </div>
+              <div class="form-group">
+                <label for="details">Tell us more!</label>
+                <textarea name="details" rows="10"></textarea>
+              </div>
 
-        <div class='submit-group'>
-          <button type="submit" id="ge_submit">Submit</button>
-        </div>
+              <div class='submit-group'>
+                <button type="submit" id="ge_submit">Submit</button>
+              </div>
 
-      </form>
+            </form>
+          </div>
 
         </details>
       </div>
@@ -474,4 +474,33 @@
     </footer>
 
   </body>
+  <script>
+     const geForm = document.querySelector("#ge_form")
+     const geSubmitButton = document.querySelector("#ge_submit")
+     const scriptURL="https://script.google.com/macros/s/AKfycbzRi9q4q3qmf38TrEP08w00LVSwg7GYH99VgOSlhX8odGTUK9MM2sAVq7co8j-oRyC3/exec";
+
+     function switchToSuccessMessage(id) {
+           let div = document.createElement('div');
+           let em = document.createElement('em');
+           em.textContent = 'Thank you! We will reach out to you soon.';
+           div.append(em);
+           let elem = document.querySelector(id);
+           elem.replaceWith(div);
+     }
+
+     geForm.addEventListener('submit', e => {
+       geSubmitButton.disabled = true
+       geSubmitButton.textContent = 'sending request';
+       e.preventDefault()
+       const requestForm = new FormData(geForm)
+       fetch(scriptURL, { method: 'POST', body: requestForm})
+         .then(response => {
+           switchToSuccessMessage('#ge-content');
+         })
+         .catch(error => {
+           alert('Error!', error.message)
+           geSubmitButton.disabled = false;
+         })
+     });
+  </script>
 </html>

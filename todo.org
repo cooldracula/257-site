@@ -1,5 +1,13 @@
 #+title: Todo
 * inbox
+** DONE add transition animation to quotes
+** DONE compress images for faster load on netlify
+** DONE make sure form is connected to google sheets
+** DONE make sure form in workspace connected to google shees
+** DONE success message on form upon submit
+** TODO style all question items properly
+** TODO alt images for every image
+* archive
 ** DONE Consistent background color
 ** DONE consistent top nav
 there should be equl space above and below
@@ -87,8 +95,3 @@ took this out, may no longer need it!
 #+end_src
 ** DONE use new images from slack chat
 ** DONE use original images throughout story page
-** TODO add transition animation to quotes
-** TODO style all question items properly
-** TODO make sure form is connected to google sheets
-** TODO make sure form in workspace connected to google shees
-** TODO alt images for every image
