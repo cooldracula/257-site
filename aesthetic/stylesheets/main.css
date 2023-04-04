@@ -3,7 +3,7 @@
 \*..................*/
 
 html {
-    font-size: 13px;
+    font-size: var(--base-pt);
 }
 body {
     background: var(--body_bg);
@@ -727,6 +727,7 @@ utton:active {
 
 @media(max-width: 667px) {
     :root {
+        --base-pt: 11px;
         --header-height: 25vh;
         --top-bar-padding: var(--space-sm);
         --top-bar-font-size: var(--font-ml);
@@ -734,6 +735,7 @@ utton:active {
 
         --big-message-padding: 0 var(--space-lg);
         --big-message-font-size: var(--font-xl);
+        --big-message-story-font-size: var(--font-l);
         --big-message-line-height: 1.33;
         --big-message-margin: var(--space-xl) var(--space-md);
 
