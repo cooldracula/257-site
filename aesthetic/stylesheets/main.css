@@ -131,6 +131,12 @@ ul,li,figure {
 
 }
 
+.logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .main-logo{
     fill: var(--text-color);
     margin-left: var(--space-lg);
@@ -801,5 +807,9 @@ utton:active {
     #forms .question-list {
         margin-top: var(--space-xl);
         margin-left: var(--space-sm);
+    }
+    footer {
+        flex-flow: column;
+        align-items: unset;
     }
 }
