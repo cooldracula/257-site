@@ -734,10 +734,10 @@ utton:active {
 @media(max-width: 667px) {
     :root {
         --base-pt: 11px;
-        --header-height: 25vh;
+        --header-height: 35vh;
         --top-bar-padding: var(--space-sm);
         --top-bar-font-size: var(--font-ml);
-        --nav-gap: var(--font-xs);
+        --nav-gap: var(--font-s);
 
         --big-message-padding: 0 var(--space-lg);
         --big-message-font-size: var(--font-xl);
@@ -752,7 +752,7 @@ utton:active {
 
         --quotes-height: 200px;
 
-        --gallery-list-height: 25vh;
+        --gallery-list-height: 35vh;
         --gallery-list-margin: 0 0 var(--space-md) 0;
 
         --question-list-padding: 0;
@@ -774,6 +774,8 @@ utton:active {
         flex-wrap: wrap;
         height: 100%;
         align-content: space-around;
+        font-size: 13px;
+        padding-left: var(--space-md);
     }
 
     .splash-topbar.sticky {
@@ -781,6 +783,10 @@ utton:active {
     }
     .splash-topbar-nav {
         justify-content: center;
+        flex-flow: column;
+        align-items: flex-start;
+        font-size: var(--font-l);
+        gap: var(--font-l);
     }
     .nav-item {
         margin-right: 0;
