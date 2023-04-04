@@ -119,7 +119,7 @@
     --directory-item-height: 55vh;
     --directory-item-margin: 0 0 var(--space-xxl) 0;
     --directory-item-padding: var(--space-xxl);
-    --directory-item-font-size: var(--font-xxl);
+    --directory-item-font-size: var(--big-message-font-size);
 
     --gallery-list-height: 800px;
     --gallery-list-width: 100vw;
