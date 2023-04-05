@@ -365,12 +365,7 @@ footer .main-logo {
     margin: var(--directory-item-margin);
     padding: var(--directory-item-padding);
     font-size: var(--directory-item-font-size);
-    background-image:
-        linear-gradient(to bottom,
-                        var(--black),
-                        transparent,
-                        transparent),
-        var(--directory-image);
+    background-image: var(--directory-image);
 }
 
 .directory-list li:last-child .directory-item{
@@ -772,11 +767,7 @@ utton:active {
 
     }
     .splash {
-        background-image:
-            linear-gradient(to bottom,
-                            var(--black),
-                            transparent),
-            var(--splash-image);
+        background-image: var(--splash-image);
     }
     .splash-topbar {
         flex-wrap: wrap;
