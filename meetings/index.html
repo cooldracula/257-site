@@ -145,13 +145,13 @@
               Fill out these simple forms and we’ll get back to you
             </li>
             <li>
-              Meeting Room
+              <a href="/forms#bmr_form" class="booking-link underlined">Meeting Room</a>
             </li>
             <li>
-              Event
+              <a href="/forms#ep_form" class="event-link underlined">Event Prebrief</a>
             </li>
             <li>
-              General Enquiry
+              <a href="/forms#ge_form" class="enquiry-link underlined">General Enquiry</a>
             </li>
             <li>
               Depending on your entry we’ll book you straight in and send through a confirmation email, call you to discuss your needs, and/or make a time to show you around our space
@@ -539,9 +539,21 @@
     <script>
      document.addEventListener('DOMContentLoaded', () => {
        const bookingLinks = document.querySelectorAll('.booking-link');
+       const epLinks = document.querySelectorAll('.event-link')
+       const geLinks = document.querySelectorAll('.enquiry-link')
        bookingLinks.forEach(link => {
          link.addEventListener('click', () => {
            localStorage.setItem('bmr_open','true')
+         })
+       })
+       epLinks.forEach(link => {
+         link.addEventListener('click', () => {
+           localStorage.setItem('ep_open','true')
+         })
+       })
+       geLinks.forEach(link => {
+         link.addEventListener('click', () => {
+           localStorage.setItem('ge_open','true')
          })
        })
      });
