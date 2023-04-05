@@ -264,9 +264,9 @@ footer .main-logo {
     padding-bottom: 0.7rem;
 }
 
-.question-item *:last-child {
-    margin-bottom: var(--font-l);
-}
+/* .question-item *:last-child { */
+/*     margin-bottom: var(--font-l); */
+/* } */
 
 .booking-link {
     display: block;
@@ -760,7 +760,7 @@ utton:active {
 
         --quotes-height: 200px;
 
-        --gallery-list-height: 35vh;
+        --gallery-list-height: 30rem;
         --gallery-list-margin: 0 0 var(--space-md) 0;
 
         --question-list-padding: 0;
@@ -805,6 +805,10 @@ utton:active {
     .big.message.w-66 p {
         max-width: 100%;
     }
+
+    .gallery-list figure {
+        height: unset;
+    }
     .directory-list li:last-child .directory-item ,
     .gallery-list figure:last-child {
         margin-bottom: var(--space-sm);
@@ -824,6 +828,14 @@ utton:active {
     .toggle-asset {
         width: var(--font-m);
     }
+
+    #meeting-rooms {
+        margin-top: var(--space-xxl);
+    }
+
+    .meeting-room-listing {
+        margin-bottom: var(--space-xl);
+    }
     #forms .question-list {
         margin-top: var(--space-xl);
         margin-left: var(--space-sm);
@@ -832,4 +844,5 @@ utton:active {
         flex-flow: column;
         align-items: unset;
     }
+
 }
