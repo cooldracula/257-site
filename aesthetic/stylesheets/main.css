@@ -778,9 +778,9 @@ utton:active {
     .splash-topbar {
         flex-wrap: wrap;
         height: 100%;
-        align-content: space-around;
+        align-content: flex-start;
         font-size: 13px;
-        padding-left: var(--space-md);
+        padding: var(--space-lg) var(--space-md);
     }
 
     .splash-topbar.sticky {
