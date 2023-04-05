@@ -14,8 +14,8 @@
     --burnt-orange: rgba(240,144,40,1);
     --purple: rgba(149,81,160,1);
     --purple_light: rgba(149,81,160,0.5);
-    /* --maroon: rgba(108,12,34,1); */
-    /* --maroon_light: rgba(108,12,34,0.5); */
+    --maroon: rgba(108,12,34,1);
+    --maroon_light: rgba(108,12,34,0.5);
     --dark-blue:  rgba(14,0,72,1);
     --yellow: rgba(255,245,113,1);
     --blush: rgba(239,148,145,1);
@@ -131,6 +131,8 @@
     --question-list-font-size: var(--font-xl);
     --question-list-line-height: 1.5;
     --question-list-width: var(--half-width);
+
+    --collective-member-color: var(--maroon);
 
     /* --side-bar: calc(var(--readable-width) / 3); */
     /* --offset: calc(var(--space-xxxl) + var(--space-xl)); */

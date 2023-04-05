@@ -702,6 +702,7 @@ utton:active {
     justify-content: center;
     align-items: flex-start;
     flex-flow: column;
+    --text-color: var(--collective-member-color);
 }
 
 .member-name {
