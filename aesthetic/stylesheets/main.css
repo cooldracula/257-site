@@ -812,6 +812,12 @@ utton:active {
     .question-item li {
         line-height: 1.4;
     }
+
+    .question-item .price-list {
+        margin-top: var(--space-xl);
+        margin-bottom: var(--space-xl);
+        padding: 0;
+    }
     .toggle-asset {
         width: var(--font-m);
     }
