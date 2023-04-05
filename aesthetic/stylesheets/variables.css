@@ -104,7 +104,7 @@
     --form-width: calc(var(--space-unit) * 35);
 
     --header-height: 90vh;
-    --top-bar-padding: var(--space-sm) var(--space-xxl) var(--space-sm) var(--space-xxl);
+    --top-bar-padding: var(--space-lg) var(--space-xxl) var(--space-lg) var(--space-xxl);
     --top-bar-font-size: var(--font-xl);
     --nav-gap: var(--font-xxl);
 
