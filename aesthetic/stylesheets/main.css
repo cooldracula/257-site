@@ -833,9 +833,10 @@ utton:active {
         margin-top: var(--space-xxl);
     }
 
-    .meeting-room-listing {
-        margin-bottom: var(--space-xl);
-    }
+    /* TODO should there be spacing here? */
+    /* .meeting-room-listing { */
+    /*     margin-bottom: var(--space-xl); */
+    /* } */
     #forms .question-list {
         margin-top: var(--space-xl);
         margin-left: var(--space-sm);
