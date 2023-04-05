@@ -36,9 +36,12 @@ ul,li,figure {
 }
 
 #quotes-header {
-    margin-bottom: var(--space-xl);
+    margin: 0;
     background: var(--cerise);
     --text-color: var(--dark-blue);
+    padding: var(--big-message-margin);
+    height: 14vh;
+    justify-content: flex-start;
 }
 
 #quotes {
