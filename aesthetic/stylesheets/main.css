@@ -37,7 +37,7 @@ ul,li,figure {
 
 #quotes-header {
     margin-bottom: var(--space-xl);
-    background: var(--pink);
+    background: var(--cerise);
     --text-color: var(--dark-blue);
 }
 
