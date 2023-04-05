@@ -677,7 +677,8 @@ utton:active {
 .submit-group button {
     padding: calc(var(--font-xxs) * 0.9);
     background: var(--dark-green);
-    color: #f2f2f2;
+    border: none;
+    color: var(--body_bg);
 }
 
 .collective-grid {
