@@ -254,6 +254,13 @@ footer .main-logo {
     margin-left: var(--space-lg);
 }
 
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 
 
 .question-list.booking .question-item {
