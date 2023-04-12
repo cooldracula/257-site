@@ -37,16 +37,17 @@ ul,li,figure {
 
 #quotes-header {
     margin: 0;
-    background: var(--cerise);
-    --text-color: var(--dark-blue);
+    --text-color: var(--dark-green);
     padding: var(--big-message-margin);
-    height: 14vh;
+    height: calc(var(--big-message-font-size) * 8);
+
+    /* height: 14vh; */
     justify-content: flex-start;
 }
 
-#quotes {
+.quotes-wrapper {
     animation: 7s linear 0s infinite normal fade;
-    height: var(--quotes-height);
+    /* height: var(--quotes-height); */
 }
 
 @keyframes fade {
@@ -73,7 +74,9 @@ ul,li,figure {
     width: 100vw;
     background-size: cover;
     background-position: top;
-    background-image: var(--splash-image);
+    background-image:
+        linear-gradient(var(--black),transparent),
+        var(--splash-image);
 }
 
 #workspace{
@@ -408,7 +411,9 @@ summary::-webkit-details-marker {
     margin: var(--directory-item-margin);
     padding: var(--directory-item-padding);
     font-size: var(--directory-item-font-size);
-    background-image: var(--directory-image);
+    background-image:
+        linear-gradient(var(--black),transparent),
+        var(--directory-image);
 }
 
 .directory-list li:last-child .directory-item{
@@ -810,7 +815,9 @@ utton:active {
 
     }
     .splash {
-        background-image: var(--splash-image);
+        background-image:
+            linear-gradient(to right, var(--black),transparent),
+            var(--splash-image);
     }
     .splash-topbar {
         flex-wrap: wrap;
