@@ -266,8 +266,6 @@ details > summary::-webkit-details-marker {
 
 
 
-.question-list.booking .question-item {
-}
 
 .question-item {
     border-top: 2px solid var(--dark-green);
@@ -816,6 +814,8 @@ utton:active {
 
     }
     .splash {
+        height: unset;
+        width: unset;
         background-image:
             linear-gradient(to right, var(--black),transparent),
             var(--splash-image);
@@ -826,6 +826,10 @@ utton:active {
         align-content: flex-start;
         font-size: 13px;
         padding: var(--space-lg) var(--space-md);
+    }
+    .full-width {
+        width: unset;
+        max-width: unset;
     }
 
     .splash-topbar.sticky {
