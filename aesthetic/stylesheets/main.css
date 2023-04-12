@@ -311,11 +311,44 @@ details > summary::-webkit-details-marker {
     font-size: var(--font-xl);
 }
 
+details > summary {
+  list-style: none;
+}
+
+details > summary::marker, /* Latest Chrome, Edge, Firefox */
+details > summary::-webkit-details-marker /* Safari */ {
+  display: none;
+  content: "";
+}
+
+summary::after {
+    display: block;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.question::before,
+.question::after {
+    display: none;
+}
 
 .question {
-    display: flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
+}
+.q-wrapper {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.q-wrapper svg {
+    height: 53px;
 }
 
 .question .content {
