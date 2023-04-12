@@ -31,6 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(document.querySelector(".splash"))
 
+
+  const bookingLinks = document.querySelectorAll('.booking-link');
+  const epLinks = document.querySelectorAll('.event-link')
+  const geLinks = document.querySelectorAll('.enquiry-link')
+  bookingLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      localStorage.setItem('bmr_open', 'true')
+    })
+  })
+  epLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      console.log('click click motherfucker')
+      localStorage.setItem('ep_open', 'true')
+    })
+  })
+  geLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      localStorage.setItem('ge_open', 'true')
+    })
+  })
 });
 
 
