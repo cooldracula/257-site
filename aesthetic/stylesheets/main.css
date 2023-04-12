@@ -888,4 +888,12 @@ utton:active {
         align-items: unset;
     }
 
+    .collective-member {
+        height: 100vw;
+        width: 100vw;
+    }
+    .member-details {
+        font-size: 3.5vw;
+    }
+
 }
