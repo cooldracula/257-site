@@ -813,6 +813,7 @@ utton:active {
         --question-list-width: 100%;
 
     }
+
     .splash {
         height: unset;
         width: unset;
@@ -820,6 +821,7 @@ utton:active {
             linear-gradient(to right, var(--black),transparent),
             var(--splash-image);
     }
+
     .splash-topbar {
         flex-wrap: wrap;
         height: 100%;
@@ -888,9 +890,12 @@ utton:active {
         margin-left: var(--space-sm);
     }
     footer {
-        flex-flow: column;
-        align-items: unset;
+        flex-flow: row;
+        align-items: flex-end;
+        font-size: var(--font-m);
     }
+
+    foote
 
     .collective-member {
         height: 100vw;
