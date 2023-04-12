@@ -476,6 +476,7 @@ figure.full-width img {
 footer {
     font-size: var(--font-l);
     --text-color: white;
+    font-weight: 300;
     padding: var(--space-xl);
     background-color: var(--dark-green);
     display: flex;
