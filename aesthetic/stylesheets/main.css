@@ -21,7 +21,7 @@ a {
     text-decoration: none;
 }
 
-a.underlined {
+.underlined {
     text-decoration: underline;
 }
 
@@ -433,6 +433,9 @@ summary::-webkit-details-marker {
 }
 .directory-item[href="/community"] {
     --directory-image: url('/aesthetic/assets/TwoFiftySeven_230421-19.jpg');
+}
+.directory-item[href="/our-story"] {
+    --directory-image: url('/aesthetic/assets/TwoFiftySeven_091120-20.jpg');
 }
 
 
