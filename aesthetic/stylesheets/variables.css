@@ -39,7 +39,7 @@
     /*------------------*\
       #Photos
     \*..................*/
-    --splash-image: url('/aesthetic/assets/gauss-splash.jpg');
+    --splash-image: url('/aesthetic/assets/4-257-Space-HighRes.jpg');
     /* --splash-image: url('/aesthetic/assets/9-257-space-web.jpg'); */
     --directory-image: url("/aesthetic/assets/1-257-Space-Web.jpg");
 
@@ -103,9 +103,9 @@
     --readable-width: 48rem;
     --form-width: calc(var(--space-unit) * 35);
 
-    --header-height: 90vh;
-    --top-bar-padding: var(--space-lg) var(--space-xxl) var(--space-lg) var(--space-xxl);
-    --top-bar-font-size: var(--font-xl);
+    --header-height: 68vh;
+    --top-bar-padding: var(--space-lg) 0 var(--space-lg) 0;
+    --top-bar-font-size: var(--font-l);
     --nav-gap: var(--font-xxl);
 
     --big-message-padding: 0 var(--space-xl);
@@ -119,7 +119,7 @@
     --directory-item-height: 55vh;
     --directory-item-margin: 0 0 var(--space-xxl) 0;
     --directory-item-padding: var(--space-xxl);
-    --directory-item-font-size: var(--big-message-font-size);
+    --directory-item-font-size: var(--font-xxl);
 
     --gallery-list-height: 800px;
     --gallery-list-width: 100vw;

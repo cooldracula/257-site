@@ -46,7 +46,7 @@ ul,li,figure {
 }
 
 #quotes-header p:first-child {
-    font-size: var(--font-xl);
+    font-size: var(--font-xxl);
 }
 
 .quotes-wrapper {
@@ -74,8 +74,11 @@ ul,li,figure {
 \*..................*/
 
 .splash {
-    height: var(--header-height);
-    width: 100vw;
+    min-height: var(--header-height);
+    padding-left: var(--space-xxl);
+    padding-right: var(--space-xxl);
+    padding-bottom: var(--space-xl);
+    max-width: 100vw;
     background-size: cover;
     background-position: top;
     background-image:
@@ -117,7 +120,10 @@ ul,li,figure {
 .splash-topbar.sticky {
     background: var(--body_bg);
     position: sticky;
+    z-index: 1;
     top: 0;
+    padding-left: var(--space-xxl);
+    padding-right: var(--space-xxl);
 }
 
 .nav-item.active {
@@ -128,18 +134,26 @@ ul,li,figure {
 .splash-topbar-nav {
     --text-color: var(--cerise);
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     gap: var(--nav-gap);
     flex-wrap: wrap;
-    padding-bottom: var(--font-m);
+    font-weight: 200;
+}
+
+.topbar-nav_sub {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-xxl);
 }
 
 
 .splash-topbar-logo ,
 .footer-logo {
-    width: calc(var(--space-xxxl) * 1.3);
+    width: calc(var(--space-xxxl) * 1.4);
     text-align: right;
+    margin-left: var(--space-xxl);
 
 }
 
@@ -185,6 +199,26 @@ footer .main-logo {
     align-items: flex-start;
 }
 
+header .big.message {
+    --text-color: var(--body_bg);
+    font-size: var(--font-xxl);
+    margin: 0;
+}
+
+header .big.message p {
+    width: calc(100% / 3);
+}
+
+header .big.message:first-of-type {
+    margin-top: var(--space-xxl);
+}
+
+header .big.message:last-child {
+    --text-color: var(--body_bg);
+    margin-bottom: var(--space-xl);
+    margin-right: var(--space-xxl);
+}
+
 @media(min-width: 667px) {
     .splash-topbar.sticky + .big.message {
         margin-top: 0;
@@ -214,7 +248,7 @@ footer .main-logo {
 }
 
 .big.message.w-50 p{
-    max-width: calc(100vw / 2);
+    max-width: calc(100vw / 2.2);
 }
 
 .big.message.w-66 p{
@@ -425,11 +459,11 @@ summary::-webkit-details-marker {
 .directory-item[href="/meetings"] {
     --directory-image: url("/aesthetic/assets/1-257-Space-Web.jpg");
 }
-.directory-item[href="/workspace"] {
-    --directory-image: url("/aesthetic/assets/18-257-Space-Web.jpg");
+.directory-item[href="/coworking"] {
+    --directory-image: url("/aesthetic/assets/coworking-bg.jpg");
 }
 .directory-item[href="/events"] {
-    --directory-image: url("/aesthetic/assets/5-257-Space-Web.jpg");
+    --directory-image: url("/aesthetic/assets/event-dir-bg.jpg");
 }
 .directory-item[href="/community"] {
     --directory-image: url('/aesthetic/assets/TwoFiftySeven_230421-19.jpg');
@@ -514,7 +548,7 @@ section#community {
 }
 
 section#community p.bigger {
-    font-size: var(--font-xl);
+    font-size: var(--font-xxl);
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -787,6 +821,49 @@ utton:active {
     }
 }
 
+section#stats {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    max-width: 100%;
+    padding: 0 var(--space-xxl);
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: var(--space-xl);
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.stats-item {
+    display: flex;
+    flex: 1;
+    flex-basis: 30%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: var(--font-xl);
+    margin-bottom: var(--space-xxl);
+}
+
+.stats-card {
+    max-width: 20rem;
+
+}
+
+.stats-card * {
+    margin: 0;
+}
+
+.stats-card b {
+    font-family: var(--heading-font);
+    font-size: calc(var(--font-xxl) * 1.6);
+    font-weight: 200;
+}
+
 
 @media(max-width: 667px) {
     :root {
@@ -849,6 +926,13 @@ utton:active {
         flex-flow: column;
         align-items: flex-start;
         font-size: var(--font-l);
+        gap: var(--font-l);
+    }
+    .topbar-nav_sub {
+        display: flex;
+        flex-flow:column;
+        /* justify-content: unset; */
+        padding-bottom: var(--font-l);
         gap: var(--font-l);
     }
     .nav-item {
