@@ -86,7 +86,7 @@ ul,li,figure {
         var(--splash-image);
 }
 
-#workspace{
+#coworking{
     --splash-image: url('/aesthetic/assets/workspace-splash.jpg');
 }
 #meetings {
@@ -205,7 +205,7 @@ header .big.message {
     margin: 0;
 }
 
-header .big.message p {
+header .big.message.w-30 p {
     width: calc(100% / 3);
 }
 
@@ -244,7 +244,7 @@ header .big.message:last-child {
 }
 
 .big.message.w-40 p{
-    max-width: calc(100vw / 1.98);
+    max-width: calc(100vw / 2.3);
 }
 
 .big.message.w-50 p{

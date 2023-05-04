@@ -103,7 +103,7 @@
     --readable-width: 48rem;
     --form-width: calc(var(--space-unit) * 35);
 
-    --header-height: 68vh;
+    --header-height: 75vh;
     --top-bar-padding: var(--space-lg) 0 var(--space-lg) 0;
     --top-bar-font-size: var(--font-l);
     --nav-gap: var(--font-xxl);
@@ -125,7 +125,7 @@
     --gallery-list-width: 100vw;
     --gallery-list-margin: 0 0 var(--space-xxl) 0;
 
-    --question-list-padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
+    --question-list-padding: 0 var(--space-xxl) var(--space-xl) var(--space-xxl);
     --question-list-margin: 0 0 var(--space-xxxl) 0;
     --question-list-content-margin: var(--space-lg) 0 0 0;
     --question-list-font-size: var(--font-xl);
