@@ -109,7 +109,7 @@
     --nav-gap: var(--font-xxl);
 
     --big-message-padding: 0 var(--space-xl);
-    --big-message-font-size: calc(var(--font-xxl) * 1.4);
+    --big-message-font-size: calc(var(--font-xxl) * 1.2);
     --big-message-story-font-size: calc(var(--font-xxl) * 1.1);
     --big-message-line-height: 1.5;
     --big-message-margin: var(--space-xxl);
@@ -131,6 +131,11 @@
     --question-list-font-size: var(--font-xl);
     --question-list-line-height: 1.5;
     --question-list-width: var(--half-width);
+
+    --meeting-room-img-width: calc(var(--half-width) + var(--space-xxl));
+    --meeting-room-text-color: var(--dark-green);
+    --meeting-room-details-margin: var(--space-lg) 0 0 var(--space-xl);
+    --meeting-room-font-size: var(--font-l);
 
     --collective-member-color: var(--maroon);
 
