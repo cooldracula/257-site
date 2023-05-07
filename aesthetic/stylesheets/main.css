@@ -1012,8 +1012,20 @@ section#stats {
         --meeting-room-details-margin: var(--space-lg);
         --meeting-room-font-size: var(--font-l);
     }
+}
 
+/* #Event Archive Figures */
 
+figure.event {
+    position: relative;
+}
+
+figure.event figcaption {
+    position: absolute;
+    --text-color: var(--body_bg);
+    top: var(--space-xxl);
+    left: var(--space-xxl);
+    font-size: var(--font-xxl);
 }
 
 
