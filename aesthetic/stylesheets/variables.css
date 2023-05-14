@@ -106,7 +106,7 @@
     --header-height: 75vh;
     --top-bar-padding: var(--space-lg) 0 var(--space-lg) 0;
     --top-bar-font-size: var(--font-l);
-    --nav-gap: var(--font-xxl);
+    --nav-gap: var(--font-l);
 
     --big-message-padding: 0 var(--space-xl);
     --big-message-font-size: calc(var(--font-xxl) * 1.2);
