@@ -862,6 +862,12 @@ utton:active {
     width: calc(100vw/2);
 }
 
+.collective-member.sticker {
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .member-details {
     font-size: 1.75vw;
     margin: 3.5vw;
