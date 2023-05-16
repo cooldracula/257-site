@@ -153,6 +153,11 @@ ul,li,figure {
 }
 
 
+.topbar-nav_sub.pages {
+    font-weight: 600;
+}
+
+
 .splash-topbar-logo ,
 .footer-logo {
     width: calc(var(--space-xxxl) * 1.4);
