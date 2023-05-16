@@ -134,7 +134,7 @@
 
     --meeting-room-img-width: calc(var(--half-width) + var(--space-xxl));
     --meeting-room-text-color: var(--dark-green);
-    --meeting-room-details-margin: var(--space-lg) 0 0 var(--space-xl);
+    --meeting-room-details-margin: 0 0 0 var(--space-xl);
     --meeting-room-font-size: var(--font-l);
 
     --collective-member-color: var(--maroon);
