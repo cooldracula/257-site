@@ -110,7 +110,7 @@
 
     --big-message-padding: 0 var(--space-xl);
     --big-message-font-size: calc(var(--font-xxl) * 1.2);
-    --big-message-story-font-size: calc(var(--font-xxl) * 1.1);
+    --big-message-story-font-size: calc(var(--font-xxl) * 0.9);
     --big-message-line-height: 1.5;
     --big-message-margin: var(--space-xxl);
 
