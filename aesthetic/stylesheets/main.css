@@ -1047,6 +1047,11 @@ figure.event figcaption {
 ul#support-list {
     font-size: var(--font-xxl);
 }
+@media(max-width: 667px) {
+    ul#support-list {
+        font-size: var(--big-message-font-size);
+    }
+}
 
 /* Members grid */
 
@@ -1181,6 +1186,7 @@ form#members-checkin {
     .big.message.w-50 p ,
     .big.message.w-66 p {
         max-width: 100%;
+        font-size: var(--big-message-font-size);
     }
 
     .gallery-list figure {
