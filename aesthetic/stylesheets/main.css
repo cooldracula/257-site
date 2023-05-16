@@ -1054,6 +1054,7 @@ figure.event figcaption {
 
 ul#support-list {
     font-size: var(--font-xxl);
+    column-count: 2;
 }
 @media(max-width: 667px) {
     ul#support-list {
