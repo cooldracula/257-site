@@ -90,6 +90,11 @@ ul,li,figure {
     --splash-image: url('/aesthetic/assets/coworking-splash.jpg');
 }
 
+#forms header{
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+}
+
 #meetings {
     --splash-image: url('/aesthetic/assets/28-257-Space-HighRes.jpg');
 }
@@ -154,7 +159,10 @@ ul,li,figure {
 
 
 .topbar-nav_sub.pages {
-    font-weight: 600;
+    font-weight: 300;
+}
+.topbar-nav_sub.actions {
+    font-weight: 100;
 }
 
 
