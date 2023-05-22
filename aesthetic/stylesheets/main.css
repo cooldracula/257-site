@@ -1054,11 +1054,12 @@ figure.event figcaption {
 
 ul#support-list {
     font-size: var(--font-xxl);
-    column-count: 2;
+    column-count: 3;
 }
 @media(max-width: 667px) {
     ul#support-list {
         font-size: var(--big-message-font-size);
+        column-count: 2;
     }
 }
 
