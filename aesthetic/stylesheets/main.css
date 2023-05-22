@@ -1091,7 +1091,7 @@ form#members-checkin {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: var(--space-md);
-    margin-bottom: var(--space-xxl);
+    margin-bottom: var(--space-xxxxl);
 }
 
 #members-checkin input[name="pin"] {
