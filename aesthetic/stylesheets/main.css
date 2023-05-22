@@ -49,6 +49,11 @@ ul,li,figure {
     font-size: var(--font-xxl);
 }
 
+.quotes-wrapper {
+    font-family: var(--display);
+}
+
+
 /* .quotes-wrapper { */
     /* animation: 7s linear 0s infinite normal fade; */
     /* height: var(--quotes-height); */
@@ -106,11 +111,9 @@ ul,li,figure {
 }
 #community {
     --splash-image: url('/aesthetic/assets/community-splash.jpg');
-    /* --splash-image: url('/aesthetic/assets/TwoFiftySeven_230421-19.jpg'); */
 }
 #our-story {
     --splash-image: url('/aesthetic/assets/our-story-1.jpg');
-    /* --splash-image: url('/aesthetic/assets/our-story-banner.jpeg'); */
 }
 #members {
     --splash-image: url('/aesthetic/assets/BCAM5025-Laetitia-Laubscher.jpg');
