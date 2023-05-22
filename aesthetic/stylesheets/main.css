@@ -832,17 +832,14 @@ input:focus {
     top: 4px;
 }
 
+.catering-options.hidden {
+    display: none;
+}
+
 input[type="radio"]:checked {
     accent-color: var(--dark-green);
     background: var(--dark-green)
 }
-
-utton:active {
-  background-color: white;
-  color: black;
-  outline: 1px solid black;
-}
-
 
 .other-input {
     margin-left: var(--font-xxxs);

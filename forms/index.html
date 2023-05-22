@@ -181,23 +181,24 @@
             <label for="bmr_equipment-other">Other: <input type="text" id="bmr-equipment_other-text" class='other-input'/></label>
           </div class="checkbox-group">
         </fieldset>
-        <fieldset>
+        <fieldset class='add-catering'>
           <legend>Would you like two/fiftyseven to organise catering?</legend>
           <div class="radio-group">
             <input type="radio" id="bmr_catering-yes" name="catering" value="yes"/>
             <label for="bmr_catering-yes">Yes</label>
           </div class="radio-group">
           <div class="radio-group">
-            <input type="radio" id="bmr_catering-no-no" name="catering" value="no, we don't need catering"/>
+            <input type="radio" class="cater-no" id="bmr_catering-no-no" name="catering" value="no, we don't need catering"/>
             <label for="bmr_catering-no-no">No, we don't need catering</label>
           </div class="radio-group">
           <div class="radio-group">
-            <input type="radio" id="bmr_catering-no-yes" name="catering" value="no, we will organise our own"/>
+            <input type="radio" class="cater-no" id="bmr_catering-no-yes" name="catering" value="no, we will organise our own"/>
             <label for="bmr_catering-no-yes">No, we will organise our own</label>
           </div class="radio-group">
         </fieldset>
+        <div class='catering-options hidden'>
         <fieldset>
-          <legend>If yes, which of the below do you want catered?</legend>
+          <legend>which of the below do you want catered?</legend>
           <div class="checkbox-group">
             <input type="checkbox" id="bmr_morning-tea" name="catering-options" value="morning tea"/>
             <label for="bmr_morning-tea">morning tea</label>
@@ -212,12 +213,13 @@
           </div class="checkbox-group">
         </fieldset>
         <div class="form-group">
-        <label for="catering-budget">What is your per person budget for all of your above selections?(e.g. $10 morning tea, $20 lunch)</label>
-        <input type="text" id="catering-budget" name="catering-budget" />
+          <label for="catering-budget">What is your per person budget for all of your above selections?(e.g. $10 morning tea, $20 lunch)</label>
+          <input type="text" id="catering-budget" name="catering-budget" />
         </div>
         <div class="form-group">
           <label for="dietary-requirements">Please let us know of any dietary requirements for your attendees</label>
           <input type="text" id="dietary-requirements" name="dietary-requirements" />
+        </div>
         </div>
         <fieldset>
           <legend>Are you any of the following?</legend>
@@ -418,6 +420,8 @@
   </body>
   <script>
    document.addEventListener('DOMContentLoaded', () => {
+     cateringOptionsHandler ()
+
      const bmrForm = document.querySelector("#bmr_form")
      const bmrSubmitButton = document.querySelector("#bmr_submit")
      // const scriptURL="https://script.google.com/macros/s/AKfycbzHuSXg4UvYsZzVNljJdkmI7h25ZlZYWuDJLzIfLGSgAz9zoUaNUqlmav91xus3jaWn/exec";
@@ -440,16 +444,16 @@
      }
 
      function switchToSuccessMessage(id) {
-           let div = document.createElement('div');
-           let p = document.createElement('p');
-           p.textContent = 'Thank you! We will reach out to you soon.';
-           let a = document.createElement('a');
-           a.classList.add('underlined');
-           a.href = '/';
-           a.textContent = 'return home';
-           div.append(p,a);
-           let elem = document.querySelector(id);
-           elem.replaceWith(div);
+       let div = document.createElement('div');
+       let p = document.createElement('p');
+       p.textContent = 'Thank you! We will reach out to you soon.';
+       let a = document.createElement('a');
+       a.classList.add('underlined');
+       a.href = '/';
+       a.textContent = 'return home';
+       div.append(p,a);
+       let elem = document.querySelector(id);
+       elem.replaceWith(div);
      }
 
      bmrForm.addEventListener('submit', e => {
@@ -537,5 +541,21 @@
        localStorage.removeItem('ep_open');
      }
    });
+
+   function cateringOptionsHandler () {
+     const caterBtns = document.querySelectorAll('.add-catering input[type="radio"]');
+     const cateringOpts = document.querySelector('.catering-options');
+
+     caterBtns.forEach(btn => {
+       btn.addEventListener('change', () => {
+         if (btn.id === 'bmr_catering-yes') {
+           cateringOpts.classList.remove('hidden');
+         } else {
+           cateringOpts.classList.add('hidden');
+         }
+       })
+     });
+   };
+
   </script>
 </html>
