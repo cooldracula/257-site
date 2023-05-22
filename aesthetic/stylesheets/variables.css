@@ -101,7 +101,7 @@
     --max-width: calc(var(--space-unit) * 80);
     --half-width: calc(var(--space-unit) * 55);
     --readable-width: 48rem;
-    --form-width: calc(var(--space-unit) * 35);
+    --form-width: var(--half-width);
 
     --header-height: 75vh;
     --top-bar-padding: var(--space-lg) 0 var(--space-lg) 0;
