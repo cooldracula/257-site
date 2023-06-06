@@ -534,25 +534,6 @@
            geSubmitButton.disabled = false;
          })
      });
-
-     const bmrOpen = localStorage.getItem('bmr_open');
-     if (bmrOpen === "true") {
-       const requestDetails = document.querySelector('#bmr');
-       requestDetails.setAttribute('open', "true");
-       localStorage.removeItem('bmr_open');
-     }
-     const geOpen = localStorage.getItem('ge_open');
-     if (geOpen === "true") {
-       const requestDetails = document.querySelector('#ge');
-       requestDetails.setAttribute('open', "true");
-       localStorage.removeItem('ge_open');
-     }
-     const epOpen = localStorage.getItem('ep_open');
-     if (epOpen === "true") {
-       const requestDetails = document.querySelector('#ep');
-       requestDetails.setAttribute('open', "true");
-       localStorage.removeItem('ep_open');
-     }
    });
 
    function cateringOptionsHandler () {
