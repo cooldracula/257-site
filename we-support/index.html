@@ -105,7 +105,10 @@
         <ul id='support-list'>
         </ul>
         <template id="item-template">
-          <li class="support-item"></li>
+          <li class="support-item">
+            <a class='support-item_link' target="_blank" rel="noreferrer nofollow">
+            </a>
+          </li>
         </template>
 
       </section>
@@ -139,7 +142,12 @@
      const raw = await response.text();
      const jsonString =   raw.match(/(?<="table":).*(?=}\);)/g)[0]
      const json = JSON.parse(jsonString)
-     const companies = json.rows.slice(1).map(c=> c.c[0].v);
+     const companies = json.rows.slice(1).map(row => {
+       return {
+         name: row.c[0].v,
+         link: row.c[1].v
+       }
+     });
 
      const supportList = document.querySelector('#support-list')
      const itemTemplate = document.querySelector('#item-template');
@@ -150,7 +158,9 @@
    function addCompany(list,template,company) {
      const clone = template.content.cloneNode(true);
      let item = clone.querySelector('li');
-     item.textContent = company;
+     let link = clone.querySelector('a');
+     link.textContent = company.name;
+     link.href=company.link;
      list.appendChild(item);
    }
 
