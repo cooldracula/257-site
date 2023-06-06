@@ -933,9 +933,8 @@ section#stats {
 .stats-grid {
     display: flex;
     flex-wrap: wrap;
-    width: 80vw;
+    width: 100vw;
     margin: auto;
-    margin-left: 10vw;
     margin-top: var(--space-xl);
     gap: 2rem;
     justify-content: space-between;
@@ -953,7 +952,7 @@ section#stats {
 }
 
 .stats-card {
-    max-width: 20rem;
+    max-width: 22rem;
 
 }
 
@@ -978,6 +977,12 @@ section#stats {
     }
     .stats-item {
         max-width: 45%;
+        flex-basis: 33%;
+        font-size: var(--font-l);
+        margin-bottom: var(--space-xl);
+    }
+    .stats-item b {
+        font-size: calc(var(--font-xxl) * 1.2);
     }
 }
 
