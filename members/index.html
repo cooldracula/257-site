@@ -22,12 +22,6 @@
 
     <link rel="icon" type="image/png" href="/aesthetic/assets/favicon.png" />
     <link rel="apple-touch-icon" href="/aesthetic/assets/favicon.png">
-    <link rel="preload" as="image" href="/aesthetic/assets/gauss-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/workspace-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/meetings-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/events-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/community-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/our-story-splash.jpg" />
     <link rel="stylesheet" href="/aesthetic/stylesheets/normalize.css" type="text/css"/>
     <link rel="stylesheet" href="/aesthetic/stylesheets/variables.css" type="text/css"/>
     <link rel="stylesheet" href="/aesthetic/stylesheets/main.css" type="text/css"/>
@@ -66,8 +60,8 @@
           <div class='members-box'>
             <div class="member-actions">
             <form id="members-checkin">
-              <input type="text" name="pin" id="pin" />
-              <label for="pin">enter email or pin</label>
+              <input type="text" name="entry" id="entry" />
+              <label for="entry">enter email or pin</label>
               <input type="submit" value="check in"/>
             </form>
             <a class="underlined" target="_blank" rel="noreferrer nofollower" href="https://twofiftyseven.officernd.com/login">log in to members portal here</a>
@@ -127,22 +121,54 @@
     </footer>
   </body>
   <script>
+   const checkinUrl = "https://script.google.com/macros/s/AKfycbzFhG0_z44_nwBDLbPvUxQChrMoKVahsj8Sh1jnM6GfHuu93jIhWZIFt5m0zoCimZ26/exec";
    const checkin = document.querySelector('#members-checkin');
    const checkinBtn = document.querySelector("input[type='submit']");
    checkin.addEventListener('submit', (e) => {
-     e.preventDefault()
-     checkinBtn.disabled = true
-     checkinBtn.textContent = 'sending request';
-     switchToSuccessMessage('#members-checkin');
+     sendToSheet(e);
    });
+   function sendToSheet(e) {
+     e.preventDefault()
+     checkinBtn.disabled = true;
+     checkinBtn.value = 'sending request';
+     requestForm = sanitizeForm(new FormData(checkin));
+
+     fetch(checkinUrl, { method: 'POST', body: requestForm })
+       .then(switchToSuccessMessage)
+       .catch(showError)
+   };
+
+   function sanitizeForm(form) {
+     const entry = form.get('entry');
+     const key = getEntryKey(entry);
+     form.set(key, entry)
+     return form;
+   };
+
+   function getEntryKey(entry) {
+     const pinPattern = /[0-9]{4}/ // exactly four digits, any number from 0-9
+     const emailPattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ // see https://www.abstractapi.com/tools/email-regex-guide
+
+     if (entry.match(pinPattern)) {
+       return 'PIN'
+     } else if (entry.match(emailPattern)) {
+       return 'EMAIL'
+     } else {
+       return 'OTHER'
+     }
+   }
 
    function switchToSuccessMessage(id) {
-     let div = document.createElement('div');
+     let successMessage = document.createElement('div');
      let p = document.createElement('p');
-     p.textContent = 'Glad to have you!';
-     div.append(p);
-     let elem = document.querySelector(id);
-     elem.replaceWith(div);
+     p.textContent = "cheers for checking and haere mai ✨ hope you have a wonderful day";
+     successMessage.append(p);
+     checkin.replaceWith(successMessage);
+   }
+
+   function showError(err) {
+     alert('Error!', err.message)
+     checkinBtn.disabled = false;
    }
   </script>
 </html>

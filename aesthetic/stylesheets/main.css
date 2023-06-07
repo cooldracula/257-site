@@ -433,6 +433,8 @@ details > summary::-webkit-details-marker {
 
 .question-item:last-child {
     border-bottom: 2px solid var(--dark-green);
+    /* padding-bottom: 0.2rem; */
+    /* padding-bottom: 0.2rem; */
 }
 
 .question-item form {
@@ -1099,7 +1101,7 @@ form#members-checkin {
     margin-bottom: var(--space-xxxxl);
 }
 
-#members-checkin input[name="pin"] {
+#members-checkin input[name="entry"] {
     grid-column: 1/3;
     border: none;
     --text-color: var(--black);
