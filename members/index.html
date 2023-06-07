@@ -22,12 +22,6 @@
 
     <link rel="icon" type="image/png" href="/aesthetic/assets/favicon.png" />
     <link rel="apple-touch-icon" href="/aesthetic/assets/favicon.png">
-    <link rel="preload" as="image" href="/aesthetic/assets/gauss-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/workspace-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/meetings-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/events-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/community-splash.jpg" />
-    <link rel="preload" as="image" href="/aesthetic/assets/our-story-splash.jpg" />
     <link rel="stylesheet" href="/aesthetic/stylesheets/normalize.css" type="text/css"/>
     <link rel="stylesheet" href="/aesthetic/stylesheets/variables.css" type="text/css"/>
     <link rel="stylesheet" href="/aesthetic/stylesheets/main.css" type="text/css"/>
@@ -66,8 +60,8 @@
           <div class='members-box'>
             <div class="member-actions">
             <form id="members-checkin">
-              <input type="text" name="pin" id="pin" />
-              <label for="pin">enter email or pin</label>
+              <input type="text" name="entry" id="entry" />
+              <label for="entry">enter email or pin</label>
               <input type="submit" value="check in"/>
             </form>
             <a class="underlined" target="_blank" rel="noreferrer nofollower" href="https://twofiftyseven.officernd.com/login">log in to members portal here</a>
@@ -127,14 +121,53 @@
     </footer>
   </body>
   <script>
+   const checkinUrl = "https://script.google.com/macros/s/AKfycbwB7uhe3_CPzpf0XjLnCGIbKketyJuO5zRqvYYTNntmCoG0bRtH9K7XmYH2tjFD19wp/exec";
    const checkin = document.querySelector('#members-checkin');
    const checkinBtn = document.querySelector("input[type='submit']");
    checkin.addEventListener('submit', (e) => {
-     e.preventDefault()
-     checkinBtn.disabled = true
-     checkinBtn.textContent = 'sending request';
-     switchToSuccessMessage('#members-checkin');
+     sendToSheet(e);
+     // e.preventDefault()
+     // checkinBtn.disabled = true
+     // checkinBtn.textContent = 'sending request';
+     // switchToSuccessMessage('#members-checkin');
    });
+   function sendToSheet(e) {
+     checkinBtn.disabled = true;
+     checkinBtn.textContent = 'sending request';
+     e.preventDefault();
+     requestForm = sanitizeForm(new FormData(checkin));
+
+     console.log({requestForm});
+     fetch(checkinUrl, { method: 'POST', body: requestForm })
+     .then(res => {
+       console.log({res})
+       switchToSuccessMessage('#members-checkin')
+     })
+     .catch(err => {
+       alert('ERROR!', error.message)
+       checkinBtn.disabled = false
+     })
+   };
+
+   function sanitizeForm(form) {
+     const entry = form.get('entry');
+     if (isPin(entry)) {
+       form.set("PIN", entry);
+     } else if (isEmail(entry)) {
+       form.set("EMAIL", entry)
+     } else {
+       form.set("OTHER", entry)
+     }
+     return form;
+   };
+
+   function isPin(entry) {
+     return false
+   };
+
+   function isEmail(entry) {
+     return false;
+   };
 
    function switchToSuccessMessage(id) {
      let div = document.createElement('div');
@@ -144,5 +177,6 @@
      let elem = document.querySelector(id);
      elem.replaceWith(div);
    }
+
   </script>
 </html>
