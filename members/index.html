@@ -121,62 +121,54 @@
     </footer>
   </body>
   <script>
-   const checkinUrl = "https://script.google.com/macros/s/AKfycbwB7uhe3_CPzpf0XjLnCGIbKketyJuO5zRqvYYTNntmCoG0bRtH9K7XmYH2tjFD19wp/exec";
+   const checkinUrl = "https://script.google.com/macros/s/AKfycbzFhG0_z44_nwBDLbPvUxQChrMoKVahsj8Sh1jnM6GfHuu93jIhWZIFt5m0zoCimZ26/exec";
    const checkin = document.querySelector('#members-checkin');
    const checkinBtn = document.querySelector("input[type='submit']");
    checkin.addEventListener('submit', (e) => {
      sendToSheet(e);
-     // e.preventDefault()
-     // checkinBtn.disabled = true
-     // checkinBtn.textContent = 'sending request';
-     // switchToSuccessMessage('#members-checkin');
    });
    function sendToSheet(e) {
+     e.preventDefault()
      checkinBtn.disabled = true;
-     checkinBtn.textContent = 'sending request';
-     e.preventDefault();
+     checkinBtn.value = 'sending request';
      requestForm = sanitizeForm(new FormData(checkin));
 
-     console.log({requestForm});
      fetch(checkinUrl, { method: 'POST', body: requestForm })
-     .then(res => {
-       console.log({res})
-       switchToSuccessMessage('#members-checkin')
-     })
-     .catch(err => {
-       alert('ERROR!', error.message)
-       checkinBtn.disabled = false
-     })
+       .then(switchToSuccessMessage)
+       .catch(showError)
    };
 
    function sanitizeForm(form) {
      const entry = form.get('entry');
-     if (isPin(entry)) {
-       form.set("PIN", entry);
-     } else if (isEmail(entry)) {
-       form.set("EMAIL", entry)
-     } else {
-       form.set("OTHER", entry)
-     }
+     const key = getEntryKey(entry);
+     form.set(key, entry)
      return form;
    };
 
-   function isPin(entry) {
-     return false
-   };
+   function getEntryKey(entry) {
+     const pinPattern = /[0-9]{4}/ // exactly four digits, any number from 0-9
+     const emailPattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ // see https://www.abstractapi.com/tools/email-regex-guide
 
-   function isEmail(entry) {
-     return false;
-   };
-
-   function switchToSuccessMessage(id) {
-     let div = document.createElement('div');
-     let p = document.createElement('p');
-     p.textContent = "cheers for checking and haere mai ✨ hope you have a wonderful day";
-     div.append(p);
-     let elem = document.querySelector(id);
-     elem.replaceWith(div);
+     if (entry.match(pinPattern)) {
+       return 'PIN'
+     } else if (entry.match(emailPattern)) {
+       return 'EMAIL'
+     } else {
+       return 'OTHER'
+     }
    }
 
+   function switchToSuccessMessage(id) {
+     let successMessage = document.createElement('div');
+     let p = document.createElement('p');
+     p.textContent = "cheers for checking and haere mai ✨ hope you have a wonderful day";
+     successMessage.append(p);
+     checkin.replaceWith(successMessage);
+   }
+
+   function showError(err) {
+     alert('Error!', err.message)
+     checkinBtn.disabled = false;
+   }
   </script>
 </html>
