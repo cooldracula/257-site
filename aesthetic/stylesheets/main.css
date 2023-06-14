@@ -128,17 +128,6 @@ ul,li,figure {
     flex-direction: row-reverse;
     font-size: var(--top-bar-font-size);
 }
-@media(max-width: 1400px) {
-    .splash-topbar{
-      --top-bar-font-size: var(--font-ml) ;
-    }
-}
-@media(max-width: 800px) {
-    .splash-topbar{
-      --top-bar-font-size: var(--font-s);
-    }
-}
-
 .splash-topbar.sticky {
     background: var(--body_bg);
     position: sticky;
@@ -186,6 +175,20 @@ ul,li,figure {
     margin-left: var(--space-lg);
 
 }
+@media(max-width: 1400px) {
+    .splash-topbar{
+      --top-bar-font-size: var(--font-ml) ;
+    }
+    .topbar-nav_sub {
+        gap: var(--space-lg);
+    }
+}
+@media(max-width: 800px) {
+    .splash-topbar{
+      --top-bar-font-size: var(--font-s);
+    }
+}
+
 
 .logo-wrapper {
     width: 100%;
