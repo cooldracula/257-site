@@ -85,7 +85,7 @@ ul,li,figure {
     padding-bottom: var(--space-xl);
     max-width: 100vw;
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-image:
         linear-gradient(var(--black),transparent),
         var(--splash-image);
