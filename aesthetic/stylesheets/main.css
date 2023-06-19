@@ -91,8 +91,8 @@ ul,li,figure {
         var(--splash-image);
 }
 
-#coworking .splash{
-    --splash-image: url('/aesthetic/assets/coworking-splash.jpg');
+#shared-office .splash{
+    --splash-image: url('/aesthetic/assets/shared-office-splash.jpg');
 }
 
 #forms header{
@@ -571,8 +571,8 @@ summary::-webkit-details-marker {
 .directory-item[href="/meetings"] {
     --directory-image: url("/aesthetic/assets/1-257-Space-Web.jpg");
 }
-.directory-item[href="/coworking"] {
-    --directory-image: url("/aesthetic/assets/coworking-bg.jpg");
+.directory-item[href="/shared-office"] {
+    --directory-image: url("/aesthetic/assets/shared-office-bg.jpg");
 }
 .directory-item[href="/events"] {
     --directory-image: url("/aesthetic/assets/event-dir-bg.jpg");
