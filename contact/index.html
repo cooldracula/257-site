@@ -58,6 +58,59 @@
       </header>
     <main>
     <div class='question-list'>
+      <details id='ge' class="question-item condensed">
+        <summary class="question">
+          <div class="q-wrapper">
+            <span class="content">
+                shared office enquiry
+            </span>
+            <svg class='toggle-asset plus' version="1.1" width="53.333332"
+                 height="53.333332" viewBox="0 0 53.333332 53.333332"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+              <g transform="matrix(1.3333333,0,0,-1.3333333,0,53.333333)">
+                <g transform="scale(0.1)">
+                  <path d="M 236.629,365.406 H 176.824 V 235.781 H 45.6797 v -63.14 H 176.824 V 42.4063 h 59.805 V 172.641 h 129.016 v 63.14 H 236.629 v 129.625"
+                    style="fill:#1f3926;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+                </g>
+              </g>
+            </svg>
+            <svg class="toggle-asset hidden minus" version="1.1" width="53.333332" height="53.333332" viewBox="0 0 53.333332 53.333332"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+              <g transform="matrix(1.3333333,0,0,-1.3333333,0,53.333333)">
+                <g transform="scale(0.1)">
+                  <path d="M 113.359,340 71.0742,297.715 162.73,206.055 70,113.32 l 44.648,-44.6481 92.735,92.7341 92.086,-92.0896 42.289,42.2886 -92.09,92.086 91.23,91.231 L 296.25,339.57 205.02,248.34 113.359,340"
+                        style="fill:#1f3926;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </summary>
+        <form id="so_form" class='booking-form w-50'>
+          <input type="hidden" name="sheet" value="general enquiry">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" name="name"/>
+          </div>
+          <div class="form-group">
+            <label for="organisation">Your organisation</label>
+            <input type="text" name="organisation"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Your email</label>
+            <input type="email" name="email"/>
+          </div>
+          <div class="form-group">
+            <label for="details">Tell us more!</label>
+            <textarea name="details" rows="10"></textarea>
+          </div>
+
+          <div class='submit-group'>
+            <button type="submit" id="so_submit">Submit</button>
+          </div>
+
+        </form>
+      </details>
       <details id='bmr' class="question-item condensed">
         <summary class="question">
           <div class="q-wrapper">
@@ -424,6 +477,8 @@
      const scriptURL="https://script.google.com/macros/s/AKfycbzRi9q4q3qmf38TrEP08w00LVSwg7GYH99VgOSlhX8odGTUK9MM2sAVq7co8j-oRyC3/exec";
      const geForm = document.querySelector("#ge_form")
      const geSubmitButton = document.querySelector("#ge_submit")
+     const soForm = document.querySelector("#so_form")
+     const soSubmitButton = document.querySelector("#so_submit")
      const epForm = document.querySelector("#ep_form")
      const epSubmitButton = document.querySelector("#ep_submit")
 
@@ -495,6 +550,21 @@
          .catch(error => {
            alert('Error!', error.message)
            geSubmitButton.disabled = false;
+         })
+     });
+
+     soForm.addEventListener('submit', e => {
+       soSubmitButton.disabled = true
+       soSubmitButton.textContent = 'sending request';
+       e.preventDefault()
+       const requestForm = new FormData(soForm)
+       fetch(scriptURL, { method: 'POST', body: requestForm})
+         .then(response => {
+           switchToSuccessMessaso('#so_form');
+         })
+         .catch(error => {
+           alert('Error!', error.messaso)
+           soSubmitButton.disabled = false;
          })
      });
 
