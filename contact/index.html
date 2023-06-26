@@ -51,7 +51,7 @@
                    target="_blank"
                    rel="noreferrer nofollow"
                    href="https://twofiftyseven.officernd.com/signup?office=5d1bcda0dbd6e40010479eec">free trial</a>
-                <a class="nav-item" href="/members">check in</a>
+                <a class="nav-item" href="/check-in">check in</a>
               </div>
             </nav>
           </div>
@@ -87,7 +87,7 @@
           </div>
         </summary>
         <form id="so_form" class='booking-form w-50'>
-          <input type="hidden" name="sheet" value="general enquiry">
+          <input type="hidden" name="sheet" value="shared office enquiry">
           <div class="form-group">
             <label for="name">Your name</label>
             <input type="text" name="name"/>
@@ -474,7 +474,7 @@
 
      const bmrForm = document.querySelector("#bmr_form")
      const bmrSubmitButton = document.querySelector("#bmr_submit")
-     const scriptURL="https://script.google.com/macros/s/AKfycbzRi9q4q3qmf38TrEP08w00LVSwg7GYH99VgOSlhX8odGTUK9MM2sAVq7co8j-oRyC3/exec";
+     const scriptURL="https://script.google.com/macros/s/AKfycbyVEgweIzbsd4nmB928ofjHkRrKF4rNUEuosFQhL1CDQ0b9PtQ1NnhTJYeZLa_-wCC0/exec";
      const geForm = document.querySelector("#ge_form")
      const geSubmitButton = document.querySelector("#ge_submit")
      const soForm = document.querySelector("#so_form")
@@ -560,7 +560,7 @@
        const requestForm = new FormData(soForm)
        fetch(scriptURL, { method: 'POST', body: requestForm})
          .then(response => {
-           switchToSuccessMessaso('#so_form');
+           switchToSuccessMessage('#so_form');
          })
          .catch(error => {
            alert('Error!', error.messaso)
