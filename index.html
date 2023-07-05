@@ -106,54 +106,53 @@
       </div>
       <section id="stats">
         <div class="stats-grid">
-
-          <div class="stats-item">
+          <div class="stats-item" id="active-members">
             <div class="stats-card">
-              <b class="stat-number">442</b>
+              <b class="stat-number"> <span>442</span></b>
               <p class="stat-detail">active members</p>
             </div>
           </div>
 
-          <div class="stats-item">
+          <div class="stats-item" id="active-orgs">
             <div class="stats-card">
-              <b class="stat-number">276</b>
+              <b class="stat-number"><span>276</span></b>
               <p class="stat-detail">active organisations and companies</p>
             </div>
           </div>
 
-          <div class="stats-item">
+          <div class="stats-item" id="events">
             <div class="stats-card">
-              <b class="stat-number">706</b>
+              <b class="stat-number"><span>706</span></b>
               <p class="stat-detail">events hosted</p>
             </div>
           </div>
 
-          <div class="stats-item">
+          <div class="stats-item" id="visits">
             <div class="stats-card">
-              <b class="stat-number">24,388</b>
+              <b class="stat-number"><span>24,388</span></b>
               <p class="stat-detail">space visits</p>
             </div>
           </div>
 
-          <div class="stats-item">
+          <div class="stats-item" id="donations">
             <div class="stats-card">
-              <b class="stat-number">$110,947</b>
+              <b class="stat-number">$<span>110,947</span></b>
               <p class="stat-detail">space donated to charities and impact organisations</p>
             </div>
           </div>
 
-          <div class="stats-item">
+          <div class="stats-item" id="supported-orgs">
             <div class="stats-card">
-              <b class="stat-number">93</b>
+              <b class="stat-number"><span>93</span></b>
               <p class="stat-detail"><a href="/we-support"
               class="underlined">organisations</a> and <a href="/community"
               class="underlined">individuals</a> received support</p>
             </div>
           </div>
 
-          <div class="stats-item">
+          <div class="stats-item" id="well-sessions">
             <div class="stats-card">
-              <b class="stat-number">418</b>
+              <b class="stat-number"><span>418</span></b>
               <p class="stat-detail">hosted wellbeing sessions by
                 <a href="https://www.thewellwgtn.co.nz/"
                    class="underlined"
@@ -165,9 +164,9 @@
             </div>
           </div>
 
-          <div class="stats-item">
+          <div class="stats-item" id="human-hours">
             <div class="stats-card">
-              <b class="stat-number">163,710</b>
+              <b class="stat-number"><span>163,710</span></b>
               <p class="stat-detail">
                 hours of work and play
               </p>
@@ -317,7 +316,28 @@
     <script>
      document.addEventListener("DOMContentLoaded", () => {
        switchQuote(4000);
+       updateStats();
      })
+
+     async function updateStats () {
+       const statsUrl = "https://docs.google.com/spreadsheets/d/1PNabgSuKyij97PykKfN4hVanayhNu7oYZqfWLEl5N_0/gviz/tq?tqx=out:json";
+       const statsItems = document.querySelectorAll('.stats-item');
+       const response = await fetch(statsUrl);
+       const raw = await response.text();
+       const json =   JSON.parse(raw.match(/(?<="table":).*(?=}\);)/g)[0]);
+       const stats = json.rows.slice(0)
+                         .reduce((coll,row) =>{
+                           let key = row.c[0].v.replace(' ','-');
+                           let val = Math.floor(row.c[1].v).toLocaleString();
+                           coll[key] = val;
+                           return coll
+                         }, {});
+
+       statsItems.forEach(stat => {
+         const num = stat.querySelector('.stat-number span');
+         num.textContent = stats[stat.id]
+       })
+     };
 
      function switchQuote (delay) {
        const quotes = [
