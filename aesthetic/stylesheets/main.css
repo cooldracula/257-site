@@ -1311,3 +1311,9 @@ form#members-checkin {
     }
 
 }
+
+.fine-print {
+    position: relative;
+    top: calc(var(--font-s) * -1.5);
+    font-size: var(--font-s);
+}
