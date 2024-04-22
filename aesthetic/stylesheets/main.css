@@ -981,6 +981,12 @@ section#stats {
     font-weight: 200;
 }
 
+.stat-number.padded span {
+    display: inline-block;
+    margin-top: var(--font-xxl);
+    margin-bottom: var(--font-xxl);
+}
+
 @media(max-width: 667px) {
     section#stats {
         padding: 0 var(--space-xl);
