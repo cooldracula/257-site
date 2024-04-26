@@ -954,7 +954,6 @@ section#stats {
     margin-bottom: var(--space-xl);
     gap: 2rem;
     justify-content: center;
-    align-items: center;
     --text-color: var(--dark-green);
 }
 
