@@ -157,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    };
 
    function getEntryKey(entry) {
-     const pinPattern = /[0-9]{4}/ // exactly four digits, any number from 0-9
+     const pinPattern = /^\d{4}$/ // exactly four digits, any number from 0-9
      const emailPattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ // see https://www.abstractapi.com/tools/email-regex-guide
 
      if (entry.match(pinPattern)) {
