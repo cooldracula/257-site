@@ -100,26 +100,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <form id="so_form" class='booking-form w-50'>
           <input type="hidden" name="sheet" value="shared office enquiry">
           <div class="form-group">
-            <label for="name">Your name</label>
+            <label for="name">Name</label>
             <input type="text" name="name" required/>
           </div>
           <div class="form-group">
-            <label for="organisation">Your organisation</label>
+            <label for="organisation">Organisation</label>
             <input type="text" name="organisation"/>
           </div>
           <div class="form-group">
-            <label for="email">Your email</label>
-            <input type="email" name="email" required/>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" required/>
           </div>
           <div class="form-group">
-            <label for="details">Tell us more!</label>
+            <label for="email">Email</label>
+            <input type="email" name="email" required/>
+          </div>
+          <fieldset>
+          <legend>Types of membership are you interested in?</legend>
+          <div class="checkbox-group">
+            <input type="checkbox" id="membership_dedicated" name="membership-types" value="Dedicated"/>
+            <label for="membership_dedicated">Dedicated Desk</label>
+          </div class="checkbox-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="membership_flexible" name="membership-types" value="Flexible"/>
+            <label for="membership_flexible">Flexible Desk</label>
+          </div class="checkbox-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="membership_day" name="membership-types" value="Day"/>
+            <label for="membership_flexible">Day Passes</label>
+          </div class="checkbox-group">
+        </fieldset>
+          <div class="form-group">
+            <label for="team-count">How many people in your team?</label>
+            <input type="number" name="team-count" required/>
+          </div>
+          <div class="form-group">
+            <label for="details">Message</label>
             <textarea name="details" rows="10"></textarea>
           </div>
-
+          <fieldset>
+          <legend>Preferred next step</legend>
+          <div class="checkbox-group">
+            <input type="checkbox" id="next-step_call" name="next-step" value="call"/>
+            <label for="next-step_call">Book a call</label>
+          </div class="checkbox-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="next-step_tour" name="next-step" value="tour"/>
+            <label for="next-stepp_tour">Book a tour</label>
+          </div class="checkbox-group">
+        </fieldset>
           <div class='submit-group'>
             <button type="submit" id="so_submit">Submit</button>
           </div>
-
         </form>
       </details>
       <details id='bmr' class="question-item condensed">
@@ -569,6 +601,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        soSubmitButton.textContent = 'sending request';
        e.preventDefault()
        const requestForm = new FormData(soForm)
+       const membershipTypes = parseCheckboxes(requestForm,'membership-types');
+       requestForm.set('membership types', membershipTypes);
+       const nextStep = parseCheckboxes(requestForm,'next-step');
+       requestForm.set('preferred next step', nextStep);
        fetch(scriptURL, { method: 'POST', body: requestForm})
          .then(response => {
            switchToSuccessMessage('#so_form');
