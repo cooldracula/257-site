@@ -146,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div class="checkbox-group">
           <div class="checkbox-group">
             <input type="checkbox" id="next-step_tour" name="next-step" value="tour"/>
-            <label for="next-stepp_tour">Book a tour</label>
+            <label for="next-step_tour">Book a tour</label>
           </div class="checkbox-group">
         </fieldset>
           <div class='submit-group'>
@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <summary class="question">
           <div class="q-wrapper">
             <span class="content">
-            meeting room booking 
+            meeting and event enquiry
             </span>
             <svg class='toggle-asset plus' version="1.1" width="53.333332"
                  height="53.333332" viewBox="0 0 53.333332 53.333332"
@@ -185,36 +185,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <form id="bmr_form" class='booking-form w-50'>
         <input type="hidden" name="sheet" value="meeting room booking">
         <div class="form-group">
-        <label for="name">Your name</label>
+        <label for="name">name</label>
         <input type="text" name="name" required/>
         </div>
         <div class="form-group">
-        <label for="organisation">Your organisation</label>
+        <label for="organisation">organisation</label>
         <input type="text" name="organisation" required/>
         </div>
         <div class="form-group">
-        <label for="email">Your email</label>
-        <input type="email" name="email" required/>
-        </div>
-        <div class="form-group">
-        <label for="phone-number">Your phone number</label>
+        <label for="phone-number">phone</label>
         <input type="tel" name="phone-number" required />
         </div>
         <div class="form-group">
-        <label for="date">Date of the meeting</label>
+        <label for="email">email</label>
+        <input type="email" name="email" required/>
+        </div>
+        <div class="form-group">
+        <label for="date">Date of booking</label>
         <input type="date" name="date" required />
         </div>
         <div class="form-group">
-        <label for="start-time">Start time of meeting - including setup time</label>
+        <label for="start-time">Start time of booking (including set up time)</label>
         <input type="time" name="start-time" required />
         </div>
         <div class="form-group">
-        <label for="attendance">End time of meeting- including packdown time</label>
+        <label for="attendance">End time of booking (including pack down time)</label>
         <input type="time" name="end-time" required />
-        </div>
-        <div class="form-group">
-        <label for="noe on time">If you're flexible on date and time, let us know your thoughts here</label>
-        <input type="text" name="note-on-time" />
         </div>
         <div class="form-group">
         <label for="attending">Number of people attending</label>
@@ -250,12 +246,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <fieldset>
           <legend>What equipment do you require?</legend>
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_tea-coffee" name="equipment" value="tea and coffee incl. mugs"/>
-            <label for="bmr_tea-coffee">Tea and coffee incl. mugs</label>
+            <input type="checkbox" id="bmr_video-conferencing" name="equipment" value="videoconferencing setup"/>
+            <label for="bmr_video-conferencing">Videoconferencing setup</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_water-glasses" name="equipment" value="water and glasses"/>
-            <label for="bmr_water-glasses">Water and glasses</label>
+            <input type="checkbox" id="bmr_soundsystem" name="equipment" value="soundsystem"/>
+            <label for="bmr_soundsystem">Soundsystem</label>
+          </div class="checkbox-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="bmr_microphones" name="equipment" value="microphones"/>
+            <label for="bmr_microphones">Microphone(s)</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
             <input type="checkbox" id="bmr_projector" name="equipment" value="projector"/>
@@ -274,63 +274,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <label for="bmr_equipment-other">Other: <input type="text" id="bmr-equipment_other-text" class='other-input'/></label>
           </div class="checkbox-group">
         </fieldset>
-        <fieldset class='add-catering'>
-          <legend>Would you like two/fiftyseven to organise catering?</legend>
-          <div class="radio-group">
-            <input type="radio" id="bmr_catering-yes" name="catering" value="yes"/>
-            <label for="bmr_catering-yes">Yes</label>
-          </div class="radio-group">
-          <div class="radio-group">
-            <input type="radio" class="cater-no" id="bmr_catering-no-no" name="catering" value="no, we don't need catering"/>
-            <label for="bmr_catering-no-no">No, we don't need catering</label>
-          </div class="radio-group">
-          <div class="radio-group">
-            <input type="radio" class="cater-no" id="bmr_catering-no-yes" name="catering" value="no, we will organise our own"/>
-            <label for="bmr_catering-no-yes">No, we will organise our own</label>
-          </div class="radio-group">
-        </fieldset>
-        <div class='catering-options hidden'>
         <fieldset>
-          <legend>which of the below do you want catered?</legend>
+          <legend>Preferred communication?</legend>
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_morning-tea" name="catering-options" value="morning tea"/>
-            <label for="bmr_morning-tea">morning tea</label>
+            <input type="checkbox" id="preferred-communication_phone" name="preferred-communication" value="phone"/>
+            <label for="preferred-communication_phone">Phone</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_lunch" name="catering-options" value="lunch"/>
-            <label for="bmr_lunch">lunch</label>
-          </div class="checkbox-group">
-          <div class="checkbox-group">
-            <input type="checkbox" id="bmr_afternoon-tea" name="catering-options" value="afternoon tea"/>
-            <label for="bmr_afternoon-tea">afternoon tea</label>
-          </div class="checkbox-group">
-        </fieldset>
-        <div class="form-group">
-          <label for="catering-budget">What is your per person budget for all of your above selections?(e.g. $10 morning tea, $20 lunch)</label>
-          <input type="text" id="catering-budget" name="catering-budget" />
-        </div>
-        <div class="form-group">
-          <label for="dietary-requirements">Please let us know of any dietary requirements for your attendees</label>
-          <input type="text" id="dietary-requirements" name="dietary-requirements" />
-        </div>
-        </div>
-        <fieldset>
-          <legend>Does your organisation have less than $200k annual turnover, and any of the following?</legend>
-          <div class="checkbox-group">
-            <input type="checkbox" id="bmr_org-type-charity" name="org-type" value="Charity/B-Corp/Not for profit <$200k"/>
-            <label for="bmr_org-type-charity">Charity / B-Corp </label>
-          </div class="checkbox-group">
-          <div>
-            <input type="checkbox" id="bmr_org-type-carbon-zero" name="org-type" value="cert carbon zero"/>
-            <label for="bmr_org-type-carbon-zero">Certified carbon zero or carbon positive</label>
-          </div class="checkbox-group">
-          <div class="checkbox-group">
-            <input type="checkbox" id="bmr_org-type-community-based" name="org-type" value="community-based volunteer"/>
-            <label for="bmr_org-type-community-based">Community-based volunteer organisation</label>
-          </div class="checkbox-group">
-          <div class="checkbox-group">
-            <input type="checkbox" id="bmr_org-type-tangata-whenua" name="org-type" value="tangata whenua or indigenous owned"/>
-            <label for="bmr_org-type-tangata-whenua">Tangata whenua or indigenous-owned organisation</label>
+            <input type="checkbox" id="preferred-communication_email" name="preferred-communication" value="email"/>
+            <label for="preferred-communication_email">Email</label>
           </div class="checkbox-group">
         </fieldset>
         <div class='submit-group'>
@@ -559,11 +511,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        const equipString = parseCheckboxes(requestForm,'equipment','#bmr-equipment_other-text');
        requestForm.set('equipment',equipString);
 
-       const caterOptString = parseCheckboxes(requestForm,'catering-options');
-       requestForm.set('catering-options',caterOptString);
-
-       const orgTypeString = parseCheckboxes(requestForm,'org-type');
-       requestForm.set('org-type',orgTypeString);
 
        const layoutType = requestForm.get('layout');
        if (layoutType === 'other') {
@@ -632,6 +579,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          .catch(error => {
            alert('Error!', error.message)
            geSubmitButton.disabled = false;
+         })
+     });
+
+     meetingAndEventEnquiryForm.addEventListener('submit', e => {
+       meetingAndEventEnquirySubmitButton.disabled = true
+       meetingAndEventEnquirySubmitButton.textContent = 'sending request';
+       e.preventDefault()
+       const requestForm = new FormData(meetingAndEventEnquiryForm)
+
+       const equipString = parseCheckboxes(requestForm,'equipment','#bmr-equipment_other-text');
+       requestForm.set('equipment',equipString);
+
+
+       const layoutType = requestForm.get('layout');
+       if (layoutType === 'other') {
+         const layoutOtherInput = document.querySelector('#bmr-layout_other-text').value;
+         requestForm.append('layout-other',layoutOtherInput);
+       };
+       fetch(scriptURL, { method: 'POST', body: requestForm})
+         .then(response => {
+           switchToSuccessMessage('#bmr_form');
+         })
+         .catch(error => {
+           alert('Error!', error.message)
+           console.log({error});
+           bmrSubmitButton.disabled = false
          })
      });
    });
