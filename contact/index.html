@@ -69,7 +69,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </header>
     <main>
     <div class='question-list'>
-      <details id='ge' class="question-item condensed">
+      <details id='workspace-enquiry' class="question-item condensed">
         <summary class="question">
           <div class="q-wrapper">
             <span class="content">
@@ -97,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </svg>
           </div>
         </summary>
-        <form id="so_form" class='booking-form w-50'>
+        <form id="workspace-enquiry_form" class='booking-form w-50'>
           <input type="hidden" name="sheet" value="shared office enquiry">
           <div class="form-group">
             <label for="name">Name</label>
@@ -136,7 +136,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="form-group">
             <label for="details">Message</label>
-            <textarea name="details" rows="10"></textarea>
+            <textarea name="details" rows="5"></textarea>
           </div>
           <fieldset>
           <legend>Preferred next step</legend>
@@ -150,11 +150,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div class="checkbox-group">
         </fieldset>
           <div class='submit-group'>
-            <button type="submit" id="so_submit">Submit</button>
+            <button type="submit" id="workspace-enquiry_submit">Submit</button>
           </div>
         </form>
       </details>
-      <details id='bmr' class="question-item condensed">
+      <details id='meeting-and-event-enquiry' class="question-item condensed">
         <summary class="question">
           <div class="q-wrapper">
             <span class="content">
@@ -182,8 +182,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </svg>
           </div>
         </summary>
-      <form id="bmr_form" class='booking-form w-50'>
-        <input type="hidden" name="sheet" value="meeting room booking">
+      <form id="meeting-and-event-enquiry_form" class='booking-form w-50'>
+        <input type="hidden" name="sheet" value="meeting and event enquiry">
         <div class="form-group">
         <label for="name">name</label>
         <input type="text" name="name" required/>
@@ -219,82 +219,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <fieldset>
           <legend>What layout do you need?</legend>
           <div class="radio-group">
-            <input type="radio" id="bmr_boardroom" name="layout" value="boardroom"/>
-            <label for="bmr_boardroom">Boardroom single table</label>
+            <input type="radio" id="meeting-and-event_boardroom" name="layout" value="boardroom"/>
+            <label for="meeting-and-event_boardroom">Boardroom single table</label>
           </div class="radio-group">
           <div class="radio-group">
-            <input type="radio" id="bmr_theatre" name="layout" value="theatre"/>
-            <label for="bmr_theatre">Theatre facing front</label>
+            <input type="radio" id="meeting-and-event_theatre" name="layout" value="theatre"/>
+            <label for="meeting-and-event_theatre">Theatre facing front</label>
           </div class="radio-group">
           <div class="radio-group">
-            <input type="radio" id="bmr_classroom" name="layout" value="classroom"/>
-            <label for="bmr_classroom">Classroom 'U' shape</label>
+            <input type="radio" id="meeting-and-event_classroom" name="layout" value="classroom"/>
+            <label for="meeting-and-event_classroom">Classroom 'U' shape</label>
           </div class="radio-group">
           <div class="radio-group">
-            <input type="radio" id="bmr_workshop" name="layout" value="workshop"/>
-            <label for="bmr_workshop">Workshop groups at tables</label>
+            <input type="radio" id="meeting-and-event_workshop" name="layout" value="workshop"/>
+            <label for="meeting-and-event_workshop">Workshop groups at tables</label>
           </div class="radio-group">
           <div class="radio-group">
-            <input type="radio" id="bmr_empty" name="layout" value="empty"/>
-            <label for="bmr_empty">Empty space</label>
+            <input type="radio" id="meeting-and-event_empty" name="layout" value="empty"/>
+            <label for="meeting-and-event_empty">Empty space</label>
           </div class="radio-group">
           <div class="radio-group">
-            <input type="radio" id="bmr_other" name="layout" value="other"/>
-            <label for="bmr_other">Other: <input type="text" id="bmr-layout_other-text" class='other-input'/></label>
+            <input type="radio" id="meeting-and-event_other" name="layout" value="other"/>
+            <label for="meeting-and-event_other">Other: <input type="text" id="meeting-and-event-layout_other-text" class='other-input'/></label>
           </div class="radio-group">
         </fieldset>
         <fieldset>
           <legend>What equipment do you require?</legend>
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_video-conferencing" name="equipment" value="videoconferencing setup"/>
-            <label for="bmr_video-conferencing">Videoconferencing setup</label>
+            <input type="checkbox" id="meeting-and-event_video-conferencing" name="equipment" value="videoconferencing setup"/>
+            <label for="meeting-and-event_video-conferencing">Videoconferencing setup</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_soundsystem" name="equipment" value="soundsystem"/>
-            <label for="bmr_soundsystem">Soundsystem</label>
+            <input type="checkbox" id="meeting-and-event_soundsystem" name="equipment" value="soundsystem"/>
+            <label for="meeting-and-event_soundsystem">Soundsystem</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_microphones" name="equipment" value="microphones"/>
-            <label for="bmr_microphones">Microphone(s)</label>
+            <input type="checkbox" id="meeting-and-event_microphones" name="equipment" value="microphones"/>
+            <label for="meeting-and-event_microphones">Microphone(s)</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_projector" name="equipment" value="projector"/>
-            <label for="bmr_projector">Projector</label>
+            <input type="checkbox" id="meeting-and-event_projector" name="equipment" value="projector"/>
+            <label for="meeting-and-event_projector">Projector</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_monitor" name="equipment" value="monitor"/>
-            <label for="bmr_monitor">Monitor</label>
+            <input type="checkbox" id="meeting-and-event_monitor" name="equipment" value="monitor"/>
+            <label for="meeting-and-event_monitor">Monitor</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-            <input type="checkbox" id="bmr_whiteboard-access" name="equipment" value="whiteboard access"/>
-            <label for="bmr_whiteboard-access">Whiteboard access</label>
+            <input type="checkbox" id="meeting-and-event_whiteboard-access" name="equipment" value="whiteboard access"/>
+            <label for="meeting-and-event_whiteboard-access">Whiteboard access</label>
           </div class="checkbox-group">
           <div class="checkbox-group">
-           <input type="checkbox" id="bmr_equipment_other" name="equipment" value="other"/>
-            <label for="bmr_equipment-other">Other: <input type="text" id="bmr-equipment_other-text" class='other-input'/></label>
+           <input type="checkbox" id="meeting-and-event_equipment_other" name="equipment" value="other"/>
+            <label for="meeting-and-event_equipment-other">Other: <input type="text" id="meeting-and-event-equipment_other-text" class='other-input'/></label>
           </div class="checkbox-group">
         </fieldset>
         <fieldset>
           <legend>Preferred communication?</legend>
+
           <div class="checkbox-group">
             <input type="checkbox" id="preferred-communication_phone" name="preferred-communication" value="phone"/>
             <label for="preferred-communication_phone">Phone</label>
           </div class="checkbox-group">
+
           <div class="checkbox-group">
             <input type="checkbox" id="preferred-communication_email" name="preferred-communication" value="email"/>
             <label for="preferred-communication_email">Email</label>
           </div class="checkbox-group">
+
         </fieldset>
         <div class='submit-group'>
-          <button type="submit" id="bmr_submit">Submit</button>
+          <button type="submit" id="meeting-and-event-enquiry_submit">Submit</button>
         </div>
       </form>
       </details>
-      <details id='ep' class="question-item condensed">
+      <details id='general-enquiry' class="question-item condensed">
         <summary class="question">
           <div class="q-wrapper">
             <span class="content">
-            event booking
+            general enquiry
             </span>
             <svg class='toggle-asset plus' version="1.1" width="53.333332"
                  height="53.333332" viewBox="0 0 53.333332 53.333332"
@@ -318,104 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </svg>
           </div>
         </summary>
-      <form id="ep_form" class='booking-form w-50'>
-        <input type="hidden" name="sheet" value="event booking">
-        <div class="form-group">
-        <label for="ep_name">Your name</label>
-        <input type="text" id="ep_name" name="name" required/>
-        </div>
-        <div class="form-group">
-        <label for="ep_organisation">Your organisation</label>
-        <input id="ep_organization" type="text" name="organisation" required/>
-        </div>
-        <div class="form-group">
-        <label for="ep_email">Your email</label>
-        <input id="em_email" type="email" name="email" required/>
-        </div>
-        <div class="form-group">
-        <label for="ep_phone-number">Your phone number</label>
-        <input type="tel" name="phone-number" required />
-        </div>
-        <div class="form-group">
-          <label for="ep_org-purpose">Short description of what you/your organisation does and why you do it?</label>
-          <input type="text" id="ep_org-purpose" name="org-purpose" required />
-        </div>
-        <div class="form-group">
-          <label for="ep_event-summary">Short description of your event</label>
-          <input type="text" id="ep_event-summary" name="event-summary" required />
-        </div>
-        <div class="form-group">
-        <label for="ep_date">what is the date of your event?</label>
-        <input id="ep_date" type="date" name="date" required />
-        </div>
-        <fieldset>
-          <legend>is your event open to the public?</legend>
-          <div class="radio-group">
-            <input type="radio" id="ep_open-public-yes" name="public" value="yes"/>
-            <label for="ep_open-public-yes">yes</label>
-          </div class="radio-group">
-          <div class="radio-group">
-            <input type="radio" id="ep_open-public-no" name="public" value="no"/>
-            <label for="bmr_theatre">no</label>
-          </div class="radio-group">
-        </fieldset>
-        <fieldset>
-          <legend>is this a repeat booking or a one-off?</legend>
-          <div class="radio-group">
-            <input type="radio" id="ep_freq-one-off" name="frequency" value="one-off"/>
-            <label for="ep_freq-one-off">one off</label>
-          </div class="radio-group">
-          <div class="radio-group">
-            <input type="radio" id="ep_freq-weekly" name="frequency" value="weekly"/>
-            <label for="ep_freq-weekly">weekly</label>
-          </div class="radio-group">
-          <div class="radio-group">
-            <input type="radio" id="ep_freq-monthly" name="frequency" value="monthly"/>
-            <label for="ep_freq-monthly">monthly</label>
-          </div class="radio-group">
-          <div class="radio-group">
-            <input type="radio" id="ep_freq-annual" name="frequency" value="annual"/>
-            <label for="ep_freq-annual">annual</label>
-          </div class="radio-group">
-          <div class="radio-group">
-            <input type="radio" id="ep_freq-other" name="frequency" value="other"/>
-            <label for="ep_freq-other">other: <input type="text" id="ep_freq-other_text" class='other-input'/></label>
-          </div class="radio-group">
-        </fieldset>
-        <div class='submit-group'>
-          <button type="submit" id="ep_submit">Submit</button>
-        </div>
-      </form>
-      </details>
-      <details id='ge' class="question-item condensed">
-        <summary class="question">
-          <div class="q-wrapper">
-            <span class="content">
-            get in touch
-            </span>
-            <svg class='toggle-asset plus' version="1.1" width="53.333332"
-                 height="53.333332" viewBox="0 0 53.333332 53.333332"
-                 xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g transform="matrix(1.3333333,0,0,-1.3333333,0,53.333333)">
-                <g transform="scale(0.1)">
-                  <path d="M 236.629,365.406 H 176.824 V 235.781 H 45.6797 v -63.14 H 176.824 V 42.4063 h 59.805 V 172.641 h 129.016 v 63.14 H 236.629 v 129.625"
-                    style="fill:#1f3926;fill-opacity:1;fill-rule:nonzero;stroke:none" />
-                </g>
-              </g>
-            </svg>
-            <svg class="toggle-asset hidden minus" version="1.1" width="53.333332" height="53.333332" viewBox="0 0 53.333332 53.333332"
-                 xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-              <g transform="matrix(1.3333333,0,0,-1.3333333,0,53.333333)">
-                <g transform="scale(0.1)">
-                  <path d="M 113.359,340 71.0742,297.715 162.73,206.055 70,113.32 l 44.648,-44.6481 92.735,92.7341 92.086,-92.0896 42.289,42.2886 -92.09,92.086 91.23,91.231 L 296.25,339.57 205.02,248.34 113.359,340"
-                        style="fill:#1f3926;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                  />
-                </g>
-              </g>
-            </svg>
-          </div>
-        </summary>
-        <form id="ge_form" class='booking-form w-50'>
+        <form id="general-enquiry_form" class='booking-form w-50'>
           <input type="hidden" name="sheet" value="general enquiry">
           <div class="form-group">
             <label for="name">Your name</label>
@@ -430,12 +336,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="email" name="email" required/>
           </div>
           <div class="form-group">
-            <label for="details">Tell us more!</label>
+            <label for="details">Message</label>
             <textarea name="details" rows="10" required></textarea>
           </div>
 
           <div class='submit-group'>
-            <button type="submit" id="ge_submit">Submit</button>
+            <button type="submit" id="general-enquiry_submit">Submit</button>
           </div>
 
         </form>
@@ -465,17 +371,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </body>
   <script>
    document.addEventListener('DOMContentLoaded', () => {
-     cateringOptionsHandler ()
-
-     const bmrForm = document.querySelector("#bmr_form")
-     const bmrSubmitButton = document.querySelector("#bmr_submit")
+     const workspaceEnquiryForm = document.querySelector("#workspace-enquiry_form")
+     const workspaceEnquirySubmit = document.querySelector("#workspace-enquiry_submit")
+     const meetingAndEventEnquiryForm = document.querySelector("#meeting-and-event-enquiry_form")
+     const meetingAndEventEnquirySubmit = document.querySelector("#meeting-and-event-enquiry_submit")
+     const generalEnquiryForm = document.querySelector("#general-enquiry_form")
+     const generalEnquirySubmit = document.querySelector("#general-enquiry_submit")
      const scriptURL="https://script.google.com/macros/s/AKfycbyVEgweIzbsd4nmB928ofjHkRrKF4rNUEuosFQhL1CDQ0b9PtQ1NnhTJYeZLa_-wCC0/exec";
-     const geForm = document.querySelector("#ge_form")
-     const geSubmitButton = document.querySelector("#ge_submit")
-     const soForm = document.querySelector("#so_form")
-     const soSubmitButton = document.querySelector("#so_submit")
-     const epForm = document.querySelector("#ep_form")
-     const epSubmitButton = document.querySelector("#ep_submit")
+
 
      function parseCheckboxes(formData,key, other) {
        let options = formData.getAll(key);
@@ -502,127 +405,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        elem.replaceWith(div);
      }
 
-     bmrForm.addEventListener('submit', e => {
-       bmrSubmitButton.disabled = true
-       bmrSubmitButton.textContent = 'sending request';
+     workspaceEnquiryForm.addEventListener('submit', e => {
+       workspaceEnquirySubmit.disabled = true
+       workspaceEnquirySubmit.textContent = 'sending request';
        e.preventDefault()
-       const requestForm = new FormData(bmrForm)
-
-       const equipString = parseCheckboxes(requestForm,'equipment','#bmr-equipment_other-text');
-       requestForm.set('equipment',equipString);
-
-
-       const layoutType = requestForm.get('layout');
-       if (layoutType === 'other') {
-         const layoutOtherInput = document.querySelector('#bmr-layout_other-text').value;
-         requestForm.append('layout-other',layoutOtherInput);
-       };
-       fetch(scriptURL, { method: 'POST', body: requestForm})
-         .then(response => {
-           switchToSuccessMessage('#bmr_form');
-         })
-         .catch(error => {
-           alert('Error!', error.message)
-           console.log({error});
-           bmrSubmitButton.disabled = false
-         })
-     });
-
-     geForm.addEventListener('submit', e => {
-       geSubmitButton.disabled = true
-       geSubmitButton.textContent = 'sending request';
-       e.preventDefault()
-       const requestForm = new FormData(geForm)
-       fetch(scriptURL, { method: 'POST', body: requestForm})
-         .then(response => {
-           switchToSuccessMessage('#ge_form');
-         })
-         .catch(error => {
-           alert('Error!', error.message)
-           geSubmitButton.disabled = false;
-         })
-     });
-
-     soForm.addEventListener('submit', e => {
-       soSubmitButton.disabled = true
-       soSubmitButton.textContent = 'sending request';
-       e.preventDefault()
-       const requestForm = new FormData(soForm)
+       const requestForm = new FormData(workspaceEnquiryForm)
        const membershipTypes = parseCheckboxes(requestForm,'membership-types');
        requestForm.set('membership types', membershipTypes);
        const nextStep = parseCheckboxes(requestForm,'next-step');
        requestForm.set('preferred next step', nextStep);
        fetch(scriptURL, { method: 'POST', body: requestForm})
          .then(response => {
-           switchToSuccessMessage('#so_form');
+           switchToSuccessMessage('#workspace-enquiry_form');
          })
          .catch(error => {
            alert('Error!', error.messaso)
-           soSubmitButton.disabled = false;
-         })
-     });
-
-     epForm.addEventListener('submit', e => {
-       epSubmitButton.disabled = true
-       epSubmitButton.textContent = 'sending request';
-       e.preventDefault()
-       const requestForm = new FormData(epForm)
-       const frequency = requestForm.get('frequency');
-       if (frequency == 'other') {
-         let otherFrequency = document.querySelector('#ep_freq-other_text').value;
-         requestForm.set('frequency',`[OTHER] ${otherFrequency}`);
-       }
-       fetch(scriptURL, { method: 'POST', body: requestForm})
-         .then(response => {
-           switchToSuccessMessage('#ep_form');
-         })
-         .catch(error => {
-           alert('Error!', error.message)
-           geSubmitButton.disabled = false;
+           workspaceEnquirySubmit.disabled = false;
          })
      });
 
      meetingAndEventEnquiryForm.addEventListener('submit', e => {
-       meetingAndEventEnquirySubmitButton.disabled = true
-       meetingAndEventEnquirySubmitButton.textContent = 'sending request';
+       meetingAndEventEnquirySubmit.disabled = true
+       meetingAndEventEnquirySubmit.textContent = 'sending request';
        e.preventDefault()
        const requestForm = new FormData(meetingAndEventEnquiryForm)
 
-       const equipString = parseCheckboxes(requestForm,'equipment','#bmr-equipment_other-text');
+       const equipString = parseCheckboxes(requestForm,'equipment','#meeting-and-event-equipment_other-text');
        requestForm.set('equipment',equipString);
 
 
        const layoutType = requestForm.get('layout');
        if (layoutType === 'other') {
-         const layoutOtherInput = document.querySelector('#bmr-layout_other-text').value;
+         const layoutOtherInput = document.querySelector('#meeting-and-event-layout_other-text').value;
          requestForm.append('layout-other',layoutOtherInput);
        };
+
+       const preferredCommunication = parseCheckboxes(requestForm, 'preferred-communication');
+       requestForm.set('preferred communication', preferredCommunication);
+
        fetch(scriptURL, { method: 'POST', body: requestForm})
          .then(response => {
-           switchToSuccessMessage('#bmr_form');
+           switchToSuccessMessage('#meeting-and-event-enquiry_form');
          })
          .catch(error => {
            alert('Error!', error.message)
            console.log({error});
-           bmrSubmitButton.disabled = false
+           meetingAndEventEnquirySubmit.disabled = false
+         })
+     });
+
+     generalEnquiryForm.addEventListener('submit', e => {
+       console.log('here it is')
+       generalEnquirySubmit.disabled = true
+       generalEnquirySubmit.textContent = 'sending request';
+       e.preventDefault()
+       const requestForm = new FormData(generalEnquiryForm)
+       fetch(scriptURL, { method: 'POST', body: requestForm})
+         .then(response => {
+           switchToSuccessMessage('#general-enquiry_form');
+         })
+         .catch(error => {
+           alert('Error!', error.message)
+           generalEnquirySubmit.disabled = false;
          })
      });
    });
-
-   function cateringOptionsHandler () {
-     const caterBtns = document.querySelectorAll('.add-catering input[type="radio"]');
-     const cateringOpts = document.querySelector('.catering-options');
-
-     caterBtns.forEach(btn => {
-       btn.addEventListener('change', () => {
-         if (btn.id === 'bmr_catering-yes') {
-           cateringOpts.classList.remove('hidden');
-         } else {
-           cateringOpts.classList.add('hidden');
-         }
-       })
-     });
-   };
 
   </script>
 </html>
