@@ -379,6 +379,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      const generalEnquirySubmit = document.querySelector("#general-enquiry_submit")
      const scriptURL="https://script.google.com/macros/s/AKfycbyVEgweIzbsd4nmB928ofjHkRrKF4rNUEuosFQhL1CDQ0b9PtQ1NnhTJYeZLa_-wCC0/exec";
 
+     const sectionID = window.location.hash
+     const expandableForms = ['#workspace-enquiry', '#meeting-and-event-enquiry', '#general-enquiry']
+     if (sectionID && expandableForms.includes(sectionID)) {
+       const form = document.querySelector(sectionID)
+       form.open = true
+     }
+
+
 
      function parseCheckboxes(formData,key, other) {
        let options = formData.getAll(key);
@@ -470,6 +478,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          })
      });
    });
-
   </script>
 </html>
