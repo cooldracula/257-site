@@ -103,7 +103,7 @@
     --readable-width: 48rem;
     --form-width: var(--half-width);
 
-    --header-height: 75vh;
+    --header-height: 80vh;
     --top-bar-padding: var(--space-lg) 0 var(--space-lg) 0;
     --top-bar-font-size: var(--font-l);
     --nav-gap: var(--font-lg);
@@ -142,4 +142,4 @@
     /* --side-bar: calc(var(--readable-width) / 3); */
     /* --offset: calc(var(--space-xxxl) + var(--space-xl)); */
     /* --section-height: calc(var(--space-xxxl) * 4); */
-
+}
